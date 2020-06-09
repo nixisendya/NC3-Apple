@@ -4,23 +4,195 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Pick CardVC-->
         <scene sceneID="KZ5-vB-Uye">
             <objects>
-                <viewController id="tDd-LN-5bF" customClass="PickCardVC" customModule="NC3Game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PickCardVC" id="tDd-LN-5bF" customClass="PickCardVC" customModule="NC3Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rZw-aH-gBl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeaderPickCard" translatesAutoresizingMaskIntoConstraints="NO" id="mvH-na-a6k">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="317"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="317" id="5Xg-gX-QxF"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f1x-7q-FFa">
+                                <rect key="frame" x="0.0" y="327" width="414" height="569"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cYa-Wg-fyP">
+                                    <size key="itemSize" width="200" height="150"/>
+                                    <size key="estimatedItemSize" width="200" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="h8K-QM-217" customClass="CardCollectionViewCell" customModule="NC3Game" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="2" width="200" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rYZ-D4-vl1">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EnveloppeOpen2" translatesAutoresizingMaskIntoConstraints="NO" id="xWV-pP-Y9v">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLF-Ne-dIF">
+                                                    <rect key="frame" x="46" y="34" width="111" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="enveloppeImage" destination="xWV-pP-Y9v" id="5Vn-HA-Ree"/>
+                                            <outlet property="nameLabel" destination="SLF-Ne-dIF" id="nPO-D7-8C9"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="tDd-LN-5bF" id="d1s-1w-d8f"/>
+                                    <outlet property="delegate" destination="tDd-LN-5bF" id="wWN-JK-4ai"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name, pick a card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shM-sw-wZM">
+                                <rect key="frame" x="243" y="79" width="148" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mvH-na-a6k" firstAttribute="top" secondItem="rZw-aH-gBl" secondAttribute="top" id="A0Y-VP-BIV"/>
+                            <constraint firstItem="mvH-na-a6k" firstAttribute="trailing" secondItem="ZBA-Pe-QGW" secondAttribute="trailing" id="T2j-ub-eN2"/>
+                            <constraint firstItem="f1x-7q-FFa" firstAttribute="trailing" secondItem="ZBA-Pe-QGW" secondAttribute="trailing" id="cyQ-s2-Gid"/>
+                            <constraint firstItem="mvH-na-a6k" firstAttribute="leading" secondItem="ZBA-Pe-QGW" secondAttribute="leading" id="iSr-jK-reF"/>
+                            <constraint firstAttribute="bottom" secondItem="f1x-7q-FFa" secondAttribute="bottom" id="psu-zF-k0S"/>
+                            <constraint firstItem="f1x-7q-FFa" firstAttribute="top" secondItem="mvH-na-a6k" secondAttribute="bottom" constant="10" id="v5L-AG-SbG"/>
+                            <constraint firstItem="f1x-7q-FFa" firstAttribute="leading" secondItem="ZBA-Pe-QGW" secondAttribute="leading" id="xhX-Go-6cI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZBA-Pe-QGW"/>
                     </view>
+                    <connections>
+                        <outlet property="alertGameplayView" destination="mTI-EG-Qqa" id="H5Y-Dw-Po2"/>
+                        <outlet property="cardCollectionView" destination="f1x-7q-FFa" id="oUq-x0-IIe"/>
+                        <outlet property="cardLocationView" destination="hz9-nM-LGy" id="fnw-yq-kG7"/>
+                        <outlet property="cardSpyView" destination="BdF-it-EQO" id="4fy-FD-0E3"/>
+                        <outlet property="locationImage" destination="Kmd-R4-vkt" id="O9n-I0-fr8"/>
+                        <outlet property="locationLabel" destination="fAX-DZ-p3T" id="bAy-K4-Cyi"/>
+                        <outlet property="namePickCardLabel" destination="shM-sw-wZM" id="HBR-8R-7c2"/>
+                        <outlet property="overlayView" destination="8oi-hl-pRP" id="fzo-PI-VOc"/>
+                        <segue destination="mhq-H8-Ue0" kind="show" identifier="goToGameplay" id="osc-FQ-ea5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRX-J3-VdZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="mTI-EG-Qqa">
+                    <rect key="frame" x="0.0" y="0.0" width="350" height="321"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GameStart" translatesAutoresizingMaskIntoConstraints="NO" id="YyY-87-iBq">
+                            <rect key="frame" x="0.0" y="0.0" width="350" height="321"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvS-AJ-OJe">
+                            <rect key="frame" x="42" y="253" width="266" height="47"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="StartInvestigate"/>
+                            <connections>
+                                <action selector="startGame:" destination="tDd-LN-5bF" eventType="touchUpInside" id="cYY-Jc-7sg"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="gRg-fP-uB1"/>
+                </view>
+                <view contentMode="scaleToFill" id="hz9-nM-LGy">
+                    <rect key="frame" x="0.0" y="0.0" width="391" height="428"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LocationCard" translatesAutoresizingMaskIntoConstraints="NO" id="Z72-GP-q19">
+                            <rect key="frame" x="20" y="0.0" width="350" height="321"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnu-Zs-e9g">
+                            <rect key="frame" x="94" y="342" width="203" height="47"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="OKButton"/>
+                            <connections>
+                                <action selector="okButtonPressed:" destination="tDd-LN-5bF" eventType="touchUpInside" id="grU-Pl-WW1"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cinema" translatesAutoresizingMaskIntoConstraints="NO" id="Kmd-R4-vkt">
+                            <rect key="frame" x="40" y="32" width="303" height="178"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAX-DZ-p3T">
+                            <rect key="frame" x="41" y="245" width="303" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="ut2-e2-idJ"/>
+                </view>
+                <view contentMode="scaleToFill" id="BdF-it-EQO">
+                    <rect key="frame" x="0.0" y="0.0" width="347" height="487"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SpyCard" translatesAutoresizingMaskIntoConstraints="NO" id="jWu-81-deL">
+                            <rect key="frame" x="13" y="0.0" width="320" height="369"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUG-KH-KaE">
+                            <rect key="frame" x="72" y="399" width="203" height="47"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="OKButton"/>
+                            <connections>
+                                <action selector="okButtonPressed:" destination="tDd-LN-5bF" eventType="touchUpInside" id="CHl-wb-XLh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="bPm-zn-lt6"/>
+                </view>
+                <view contentMode="scaleToFill" id="8oi-hl-pRP">
+                    <rect key="frame" x="0.0" y="0.0" width="445" height="969"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <viewLayoutGuide key="safeArea" id="eKg-fX-cvm"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="141" y="11"/>
+            <point key="canvasLocation" x="140.57971014492756" y="10.714285714285714"/>
+        </scene>
+        <!--Gameplay-->
+        <scene sceneID="ueD-XO-aUQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Gameplay" id="mhq-H8-Ue0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="swO-B1-fYE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9fy-3z-vNY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="-86"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cinema" width="303" height="178"/>
+        <image name="EnveloppeOpen2" width="173" height="145"/>
+        <image name="GameStart" width="350" height="321"/>
+        <image name="HeaderPickCard" width="414" height="317"/>
+        <image name="LocationCard" width="350" height="321"/>
+        <image name="OKButton" width="203" height="47"/>
+        <image name="SpyCard" width="328" height="371"/>
+        <image name="StartInvestigate" width="266" height="47"/>
+    </resources>
 </document>

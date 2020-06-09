@@ -29,6 +29,8 @@
 		3E6CB20B248F5F6500BF8816 /* EndGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6CB20A248F5F6500BF8816 /* EndGame.storyboard */; };
 		3E6CB20D248F662500BF8816 /* PlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB20C248F662500BF8816 /* PlayerCollectionViewCell.swift */; };
 		3E6CB210248F832000BF8816 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB20F248F832000BF8816 /* Player.swift */; };
+		3E6CB212248FC44B00BF8816 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB211248FC44B00BF8816 /* CardCollectionViewCell.swift */; };
+		3E7AB4A9248FCB4400486651 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7AB4A8248FCB4400486651 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		3E6CB20A248F5F6500BF8816 /* EndGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EndGame.storyboard; sourceTree = "<group>"; };
 		3E6CB20C248F662500BF8816 /* PlayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewCell.swift; sourceTree = "<group>"; };
 		3E6CB20F248F832000BF8816 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		3E6CB211248FC44B00BF8816 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		3E7AB4A8248FCB4400486651 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 			children = (
 				3E6CB1F3248F5DFD00BF8816 /* PickCard.storyboard */,
 				3E6CB1F5248F5E1200BF8816 /* PickCardVC.swift */,
+				3E6CB211248FC44B00BF8816 /* CardCollectionViewCell.swift */,
 			);
 			path = "Pick Card";
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				3E6CB20F248F832000BF8816 /* Player.swift */,
+				3E7AB4A8248FCB4400486651 /* Card.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -264,7 +270,9 @@
 				3E6CB210248F832000BF8816 /* Player.swift in Sources */,
 				3E6CB205248F5F2B00BF8816 /* HowToPlayVC.swift in Sources */,
 				3E6CB1FE248F5E8B00BF8816 /* VoteVC.swift in Sources */,
+				3E6CB212248FC44B00BF8816 /* CardCollectionViewCell.swift in Sources */,
 				3E6CB1F6248F5E1200BF8816 /* PickCardVC.swift in Sources */,
+				3E7AB4A9248FCB4400486651 /* Card.swift in Sources */,
 				3E6CB1D6248F5CE100BF8816 /* SceneDelegate.swift in Sources */,
 				3E6CB1F2248F5DCC00BF8816 /* AddPlayerVC.swift in Sources */,
 				3E6CB201248F5EEE00BF8816 /* VoteLocationVC.swift in Sources */,
@@ -344,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -398,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

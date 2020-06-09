@@ -29,86 +29,36 @@ class AddPlayerVC: UIViewController {
         playerCollectionView.delegate = self
         playerCollectionView.dataSource = self
         
-        // Set click anywhere to dismiss IDCard
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(closeView), name: NSNotification.Name("CloseView"), object: nil)
-
-
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(closeView(_:)))
-        view.addGestureRecognizer(gesture)
-        self.gesture = gesture
-        
         let pan = UIPanGestureRecognizer(target: self, action: #selector(handleDismiss))
         view.addGestureRecognizer(pan)
         
+        // Tap anywhere to close keyboard
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
+        
+        nameTextField.autocorrectionType = .no
+        
     }
     
-    @IBAction func joinTeamButtonPressed(_ sender: Any) {
-        let name: String = nameTextField.text ?? "Name"
-        let newPlayer = Player(name: name, avatar: UIImage(named: "Avatar")!)
-        players.append(newPlayer)
-        
-        // These values depends on the positioning of your element
-        let top = CGAffineTransform(translationX: 0, y: -750)
-
-        UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
-              // Add the transformation in this block
-              // self.container is your view that you want to animate
-              self.viewIDCard.transform = top
-        }, completion: nil)
-        
-        
-        let secondsToDelay = 0.5
-        perform(#selector(delayedFunction), with: nil, afterDelay: secondsToDelay)
-//        sleep(1)
-//        viewIDCard.removeFromSuperview()
-//        overlayView.removeFromSuperview()
-        
-        print(players)
-        playerCollectionView.reloadData()
-    }
-    
-    @objc func delayedFunction() {
-        viewIDCard.removeFromSuperview()
-        overlayView.removeFromSuperview()
-        self.viewIDCard.transform = .identity
-    }
-    
-    // Set click anywhere to dismiss IDCard
-    @objc private func closeView(_ tapGestureRecognizer: UITapGestureRecognizer) {
-        let location = tapGestureRecognizer.location(in: viewIDCard)
-        guard viewIDCard.isHidden == false,
-              !viewIDCard.bounds.contains(location) else {  //We need to have tapped outside of view 2
-            return
-        }
-        overlayView.removeFromSuperview()
-        viewIDCard.removeFromSuperview()
-    }
-    
-    @objc func handleDismiss(sender: UIPanGestureRecognizer) {
-        
-        switch sender.state {
-        case .changed:
-            viewTranslation = sender.translation(in: viewIDCard)
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                self.viewIDCard.transform = CGAffineTransform(translationX: 0, y: self.viewTranslation.y)
-            })
-        case .ended:
-            if viewTranslation.y > -200 {
-                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                    self.viewIDCard.transform = .identity
-                })
-            } else {
-                self.viewIDCard.transform = .identity
-                self.viewIDCard.removeFromSuperview()
-                self.overlayView.removeFromSuperview()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToPickCard" {
+            if let destinationVC = segue.destination as? PickCardVC {
+                destinationVC.arrayOfPlayers = players
             }
-        default:
-            break
         }
-        
     }
     
+    @IBAction func startGamePressed(_ sender: Any) {
+        if (players.count < 3) {
+            let alertController = UIAlertController(title: "Players Required", message:
+                "You need at least 3 players to start the game!", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+
+            self.present(alertController, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: "goToPickCard", sender: self)
+        }
+    }
     
 }
 
@@ -157,12 +107,79 @@ extension AddPlayerVC: UICollectionViewDelegate, UICollectionViewDataSource {
     @objc func addButtonTapped() {
         print("Show UI to add new player")
         nameTextField.text = ""
-        overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+    
+        overlayView.backgroundColor = .black
+        overlayView.alpha = 0.8
         view.addSubview(overlayView)
         
         viewIDCard.center.x = self.view.center.x
         viewIDCard.frame.origin.y = 0
         view.addSubview(viewIDCard)
     }
+    
+    func transitionIDout() {
+        
+        // These values depends on the positioning of your element
+        let top = CGAffineTransform(translationX: 0, y: -750)
+
+        UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
+              // Add the transformation in this block
+              // self.container is your view that you want to animate
+              self.viewIDCard.transform = top
+        }, completion: nil)
+        
+        
+        let secondsToDelay = 0.5
+        perform(#selector(delayedFunction), with: nil, afterDelay: secondsToDelay)
+        
+        UIViewPropertyAnimator(duration: 0.5, curve: .easeOut, animations: {
+            self.overlayView.alpha = 0
+        }).startAnimation()
+    }
+    
+    @IBAction func joinTeamButtonPressed(_ sender: Any) {
+        let name: String = nameTextField.text ?? "Name"
+        let newPlayer = Player(name: name, avatar: UIImage(named: "Avatar")!)
+        players.append(newPlayer)
+        
+        transitionIDout()
+        
+        print(players)
+        playerCollectionView.reloadData()
+    }
+    
+    @objc func delayedFunction() {
+        viewIDCard.removeFromSuperview()
+        overlayView.removeFromSuperview()
+        self.viewIDCard.transform = .identity
+    }
+    
+    @objc func handleDismiss(sender: UIPanGestureRecognizer) {
+        
+        switch sender.state {
+        case .changed:
+            viewTranslation = sender.translation(in: viewIDCard)
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                self.viewIDCard.transform = CGAffineTransform(translationX: 0, y: self.viewTranslation.y)
+            })
+        case .ended:
+            if viewTranslation.y > -200 {
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                    self.viewIDCard.transform = .identity
+                })
+                transitionIDout()
+                
+            } else {
+                self.viewIDCard.transform = .identity
+                self.viewIDCard.removeFromSuperview()
+                self.overlayView.removeFromSuperview()
+            }
+        default:
+            break
+        }
+        
+    }
+    
+
 }
 

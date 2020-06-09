@@ -21,7 +21,7 @@
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0DP-eO-s7E">
                                 <rect key="frame" x="0.0" y="336" width="414" height="430"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="430" id="4zh-Tm-58W"/>
                                 </constraints>
@@ -70,9 +70,12 @@
                                 <state key="normal" image="100%">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="startGamePressed:" destination="nW0-VB-crE" eventType="touchUpInside" id="oWL-oI-im2"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mQg-QT-Sew" firstAttribute="trailing" secondItem="hrp-IO-atm" secondAttribute="trailing" constant="44" id="40t-ix-Xuh"/>
                             <constraint firstItem="WfB-Bd-Zn3" firstAttribute="leading" secondItem="mQg-QT-Sew" secondAttribute="leading" id="530-GG-IJg"/>
@@ -92,6 +95,7 @@
                         <outlet property="playerCollectionView" destination="0DP-eO-s7E" id="PqP-Rr-4uH"/>
                         <outlet property="playerJoinButton" destination="oJv-eL-dH3" id="22z-HH-TG4"/>
                         <outlet property="viewIDCard" destination="5WY-BL-mpQ" id="KMa-s6-oET"/>
+                        <segue destination="8jo-a0-zui" kind="show" identifier="goToPickCard" id="kd8-Hb-kfq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ylv-Il-HnQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -138,6 +142,16 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="-33.333333333333336" y="-8.0357142857142847"/>
+        </scene>
+        <!--PickCardVC-->
+        <scene sceneID="VoM-9M-jBw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PickCard" referencedIdentifier="PickCardVC" id="8jo-a0-zui" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xYL-bO-YYT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xky-D2-Hbq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714" y="-11"/>
         </scene>
     </scenes>
     <resources>
