@@ -49,6 +49,7 @@ class PickCardVC: UIViewController {
     func generateCards() {
         
         randomLocation = arrayOfLocations.randomElement()!
+        print(randomLocation)
         let indexSpy = Int.random(in: 0..<arrayOfPlayers.count)
         
         print("The spy is index \(indexSpy)")
@@ -132,8 +133,9 @@ extension PickCardVC: UICollectionViewDelegate, UICollectionViewDataSource {
         arrayOfCards[indexPath.row].openedBy = randomPerson
         
         showCard(index: indexPath.row)
-        orderNameToPickCard()
         arrayOfPlayersName.removeAll { $0 == randomPerson }
+        orderNameToPickCard()
+        
         
         cardCollectionView.reloadData()
     }
@@ -150,17 +152,18 @@ extension PickCardVC: UICollectionViewDelegate, UICollectionViewDataSource {
             view.addSubview(overlayView)
                 
             cardSpyView.center = self.view.center
-            locationLabel.text = cardChosen.location
             
             view.addSubview(cardSpyView)
         } else {
-            print("Show Spy Card Chosen View")
+            print("Show Location Card Chosen View")
             
             overlayView.backgroundColor = .black
             overlayView.alpha = 0.8
             view.addSubview(overlayView)
                 
             cardLocationView.center = self.view.center
+            locationLabel.text = randomLocation
+            
             view.addSubview(cardLocationView)
         }
     
