@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nW0-VB-crE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add PlayerVC-->
+        <scene sceneID="62q-zF-3sA">
+            <objects>
+                <viewController id="nW0-VB-crE" customClass="AddPlayerVC" customModule="NC3Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PCe-SH-PG7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="WfB-Bd-Zn3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="326"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0DP-eO-s7E">
+                                <rect key="frame" x="0.0" y="336" width="414" height="430"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="430" id="4zh-Tm-58W"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lOr-fK-egp">
+                                    <size key="itemSize" width="120" height="120"/>
+                                    <size key="estimatedItemSize" width="120" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="playerCell" id="JgH-Op-AEs" customClass="PlayerCollectionViewCell" customModule="NC3Game" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="120" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yCf-Uw-anv">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Avatar" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H6r-ov-tA9">
+                                                    <rect key="frame" x="10" y="0.0" width="100" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddf-zO-azA">
+                                                    <rect key="frame" x="10" y="108" width="100" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="120" height="140"/>
+                                        <connections>
+                                            <outlet property="playerAvatarImageView" destination="H6r-ov-tA9" id="5aI-6V-vFP"/>
+                                            <outlet property="playerName" destination="ddf-zO-azA" id="lNg-6R-Jj5"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="nW0-VB-crE" id="ISs-hO-Ge1"/>
+                                    <outlet property="delegate" destination="nW0-VB-crE" id="uAL-9l-Yc1"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrp-IO-atm">
+                                <rect key="frame" x="44" y="798" width="326" height="52"/>
+                                <state key="normal" image="100%">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mQg-QT-Sew" firstAttribute="trailing" secondItem="hrp-IO-atm" secondAttribute="trailing" constant="44" id="40t-ix-Xuh"/>
+                            <constraint firstItem="WfB-Bd-Zn3" firstAttribute="leading" secondItem="mQg-QT-Sew" secondAttribute="leading" id="530-GG-IJg"/>
+                            <constraint firstItem="WfB-Bd-Zn3" firstAttribute="trailing" secondItem="mQg-QT-Sew" secondAttribute="trailing" id="EeS-7c-SdN"/>
+                            <constraint firstItem="WfB-Bd-Zn3" firstAttribute="top" secondItem="PCe-SH-PG7" secondAttribute="top" id="G7E-qo-C1P"/>
+                            <constraint firstItem="0DP-eO-s7E" firstAttribute="trailing" secondItem="mQg-QT-Sew" secondAttribute="trailing" id="JZa-rs-e6r"/>
+                            <constraint firstItem="mQg-QT-Sew" firstAttribute="bottom" secondItem="hrp-IO-atm" secondAttribute="bottom" constant="12" id="Xo7-hs-cm9"/>
+                            <constraint firstItem="0DP-eO-s7E" firstAttribute="leading" secondItem="mQg-QT-Sew" secondAttribute="leading" id="aNl-vo-6gD"/>
+                            <constraint firstItem="0DP-eO-s7E" firstAttribute="top" secondItem="WfB-Bd-Zn3" secondAttribute="bottom" constant="10" id="kk5-xm-oLB"/>
+                            <constraint firstItem="hrp-IO-atm" firstAttribute="leading" secondItem="mQg-QT-Sew" secondAttribute="leading" constant="44" id="lHv-yS-zba"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mQg-QT-Sew"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="en2-dW-zFA" id="rxc-FM-2Et"/>
+                        <outlet property="overlayView" destination="5c4-oc-u10" id="zjF-ih-S0T"/>
+                        <outlet property="playerCollectionView" destination="0DP-eO-s7E" id="PqP-Rr-4uH"/>
+                        <outlet property="playerJoinButton" destination="oJv-eL-dH3" id="22z-HH-TG4"/>
+                        <outlet property="viewIDCard" destination="5WY-BL-mpQ" id="KMa-s6-oET"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ylv-Il-HnQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="5WY-BL-mpQ">
+                    <rect key="frame" x="0.0" y="0.0" width="323" height="720"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IDCard" translatesAutoresizingMaskIntoConstraints="NO" id="ePy-Ib-tMd">
+                            <rect key="frame" x="0.0" y="0.0" width="323" height="720"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="tGQ-hQ-M9H">
+                            <rect key="frame" x="89" y="369" width="145" height="145"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="en2-dW-zFA">
+                            <rect key="frame" x="89" y="535" width="145" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Division Unknown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF5-14-TAa">
+                            <rect key="frame" x="104" y="577" width="115" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <color key="highlightedColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJv-eL-dH3">
+                            <rect key="frame" x="60" y="625" width="203" height="47"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="JoinTeam"/>
+                            <connections>
+                                <action selector="joinTeamButtonPressed:" destination="nW0-VB-crE" eventType="touchUpInside" id="id3-AQ-3V8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="e6Y-fB-79N"/>
+                </view>
+                <view contentMode="scaleToFill" id="5c4-oc-u10">
+                    <rect key="frame" x="0.0" y="0.0" width="443" height="946"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <viewLayoutGuide key="safeArea" id="T9X-7S-YSE"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-33.333333333333336" y="-8.0357142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="100%" width="326" height="52"/>
+        <image name="Avatar" width="142" height="146"/>
+        <image name="Header" width="414" height="326"/>
+        <image name="IDCard" width="323" height="720"/>
+        <image name="JoinTeam" width="203" height="47"/>
+    </resources>
+</document>
