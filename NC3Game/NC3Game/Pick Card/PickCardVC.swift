@@ -29,6 +29,8 @@ class PickCardVC: UIViewController {
     
     var randomPerson = ""
     var randomLocation = ""
+    
+    var firstToAsk = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +43,19 @@ class PickCardVC: UIViewController {
             arrayOfPlayersName.append(item.name)
         }
         
+        firstToAsk = arrayOfPlayersName.randomElement()!
+        
         generateCards()
         orderNameToPickCard()
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToGameplay" {
+            if let destinationVC = segue.destination as? GameplayVC {
+                destinationVC.firstPlayer = firstToAsk
+            }
+        }
     }
     
     func generateCards() {
@@ -54,7 +66,7 @@ class PickCardVC: UIViewController {
         
         print("The spy is index \(indexSpy)")
         
-        for n in 1...arrayOfPlayers.count {
+        for n in 0..<arrayOfPlayers.count {
             if n == indexSpy {
                 let card = Card(isOpened: false, openedBy: "", location: randomLocation, isSpy: true)
                 arrayOfCards.append(card)
