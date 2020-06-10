@@ -61,6 +61,7 @@
                                         <size key="customSize" width="414" height="783"/>
                                         <connections>
                                             <outlet property="gambarHTP" destination="ARc-T3-w8l" id="KWf-Ee-8Xh"/>
+                                            <outlet property="pageC" destination="Pvi-fn-zz3" id="Uh4-Na-uFZ"/>
                                             <outlet property="textHTP" destination="TS5-ai-MfK" id="zcn-Sl-iXp"/>
                                         </connections>
                                     </collectionViewCell>

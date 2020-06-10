@@ -30,6 +30,8 @@ class HowToPlayVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! cellCollection
         cell.gambarHTP.image = UIImage (named: arrayGambarHTP[indexPath.item])
         cell.textHTP.text = arrayTextHTP[indexPath.item]
+        cell.pageC.currentPage = indexPath.item
+        
         return cell
     }
     
@@ -40,4 +42,5 @@ class cellCollection: UICollectionViewCell{
     
     @IBOutlet weak var gambarHTP: UIImageView!
     @IBOutlet weak var textHTP: UILabel!
+    @IBOutlet weak var pageC: UIPageControl!
 }
