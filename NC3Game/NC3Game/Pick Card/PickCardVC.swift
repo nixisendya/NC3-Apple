@@ -25,7 +25,7 @@ class PickCardVC: UIViewController {
     var arrayOfPlayersName: [String] = []
     var arrayOfCards: [Card] = []
     
-    var arrayOfLocations: [String] = ["Club", "Cinema", "School", "Hotel", "Hospital", "Airport", "Car"]
+    var arrayOfLocations: [String] = ["Club.pdf", "Cinema.pdf", "School.pdf", "Hotel.pdf", "Hospital.pdf", "Airport.pdf", "Car.pdf", "Zoo.pdf", "House.pdf", "Restaurant.pdf", "Concert.pdf"]
     
     var randomPerson = ""
     var randomLocation = ""
@@ -175,6 +175,7 @@ extension PickCardVC: UICollectionViewDelegate, UICollectionViewDataSource {
                 
             cardLocationView.center = self.view.center
             locationLabel.text = randomLocation
+            
             
             view.addSubview(cardLocationView)
         }
