@@ -35,7 +35,10 @@ class HowToPlayVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         return cell
     }
     
-
+    @IBAction func homeButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "goToHome", sender: self)
+    }
+    
 }
 
 class cellCollection: UICollectionViewCell{

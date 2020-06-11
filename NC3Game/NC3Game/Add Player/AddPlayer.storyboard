@@ -67,7 +67,7 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrp-IO-atm">
                                 <rect key="frame" x="44" y="798" width="326" height="52"/>
-                                <state key="normal" image="100%">
+                                <state key="normal" image="StartGame">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -155,10 +155,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="100%" width="326" height="52"/>
         <image name="Avatar" width="142" height="146"/>
         <image name="Header" width="414" height="326"/>
         <image name="IDCard" width="323" height="720"/>
         <image name="JoinTeam" width="203" height="47"/>
+        <image name="StartGame" width="326" height="52"/>
     </resources>
 </document>

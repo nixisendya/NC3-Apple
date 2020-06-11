@@ -49,7 +49,7 @@
                                                     <rect key="frame" x="20" y="468" width="374" height="306"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gambarHTP1" id="ARc-T3-w8l">
@@ -80,7 +80,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="homeButton"/>
                                         <connections>
-                                            <segue destination="bQh-3q-YPW" kind="show" id="EL4-OW-GHS"/>
+                                            <action selector="homeButtonPressed:" destination="xPI-yW-k3w" eventType="touchUpInside" id="u8i-oR-4Wg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -92,11 +92,22 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="R8j-pK-EV8" id="Hzm-QP-lWy"/>
+                        <segue destination="JSf-pp-oxZ" kind="show" identifier="goToHome" id="1YN-eG-Qcj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6e7-zB-7Fs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="95.652173913043484" y="8.7053571428571423"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="xUx-Hv-USr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="JSf-pp-oxZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ukV-qg-7dy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wa0-Bf-cdX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="456"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tTq-jD-TSD">
@@ -121,9 +132,6 @@
                                         <rect key="frame" x="166" y="329" width="83" height="67"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="homeButton"/>
-                                        <connections>
-                                            <segue destination="s5y-u2-AEX" kind="show" id="QHL-2s-dUN"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.34509803919999998" green="0.62352941179999999" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -176,9 +184,6 @@
                                         <rect key="frame" x="166" y="329" width="83" height="67"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="homeButton"/>
-                                        <connections>
-                                            <segue destination="8HF-1S-4fm" kind="show" id="j1I-Um-iOA"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.34509803919999998" green="0.62352941179999999" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -229,9 +234,6 @@
                                         <rect key="frame" x="166" y="329" width="83" height="67"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="homeButton"/>
-                                        <connections>
-                                            <segue destination="J49-vW-l4C" kind="show" id="ucf-xx-Ql3"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.34509803919999998" green="0.62352941179999999" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
