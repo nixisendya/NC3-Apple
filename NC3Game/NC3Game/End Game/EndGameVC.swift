@@ -15,24 +15,52 @@ class EndGameVC: UIViewController {
     @IBOutlet weak var playerAvatar: UIImageView!
     @IBOutlet weak var timerLabel: UILabel!
     
+    @IBOutlet weak var firstLabelGuess: UILabel!
+    
     @IBOutlet weak var magnifyingGlassImage: UIImageView!
     
     var performSegueToWinLoseCondition = false
-    var votedPlayer: Player!
+    var votedPlayer: Player?
+    var chosenLocation = ""
     var realSpy: Player!
+    var randomLocation: String!
+    var realLocation: String!
+    
+    var firstLabel: String!
+    var secondLabel: String!
+    var thirdImage: String!
 
     var seconds = 3
     
     var isSpy: Bool!
+    var spyGuessCorrect: Bool!
+    
+    var spyOrLocation = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+ 
+        firstLabelGuess.text = firstLabel
+        playerNameLabel.text = secondLabel
+        playerAvatar.image = UIImage(named: thirdImage)
+
+        if (votedPlayer != nil){
+            spyOrLocation = "Spy"
+            isSpy = votedPlayer!.isSpy
+        } else {
+            isSpy = false
+        }
         
-        print(realSpy)
-        
-        playerNameLabel.text = votedPlayer.name
-        playerAvatar.image = votedPlayer.avatar
-        isSpy = votedPlayer.isSpy
+        if (realLocation != nil){
+            spyOrLocation = "Location"
+            if realLocation == secondLabel {
+                spyGuessCorrect = true
+            } else {
+                spyGuessCorrect = false
+            }
+        } else {
+            spyGuessCorrect = false
+        }
         
         animateGlass()
 
@@ -75,14 +103,23 @@ class EndGameVC: UIViewController {
     }
     
     func determineWinLose() {
-        if (isSpy) {
-            print("Detective Menang")
-            performSegue(withIdentifier: "goToDetectiveWin", sender: self)
+        if (spyOrLocation == "Spy") {
+            if (isSpy) {
+                print("Detective Menang")
+                performSegue(withIdentifier: "goToDetectiveWin", sender: self)
+            } else {
+                print("Spy menang")
+                performSegue(withIdentifier: "goToLose", sender: self)
+            }
         } else {
-            print("Spy menang")
-            performSegue(withIdentifier: "goToLose", sender: self)
+            if (!spyGuessCorrect) {
+                print("Detective Menang")
+                performSegue(withIdentifier: "goToDetectiveWin", sender: self)
+            } else {
+                print("Spy menang")
+                performSegue(withIdentifier: "goToLose", sender: self)
+            }
         }
-        
     }
     
 }

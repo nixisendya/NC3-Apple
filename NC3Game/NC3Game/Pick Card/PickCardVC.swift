@@ -63,6 +63,7 @@ class PickCardVC: UIViewController {
                 destinationVC.firstPlayer = firstToAsk
                 destinationVC.arrayOfPlayers = arrayOfPlayers
                 destinationVC.indexSpy = randomPersonIndex
+                destinationVC.randomLocation = randomLocation.name
             }
         }
     }

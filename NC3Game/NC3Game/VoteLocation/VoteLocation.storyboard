@@ -71,11 +71,22 @@
                     </view>
                     <connections>
                         <outlet property="colView" destination="sHi-OU-SrT" id="TNY-Jb-0LH"/>
+                        <segue destination="yIN-Ha-mvQ" kind="show" identifier="goToEndgame" id="32L-yZ-hsk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RE1-S1-RuS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="0.6696428571428571"/>
+        </scene>
+        <!--EndGame-->
+        <scene sceneID="JJe-t8-HAK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EndGame" id="yIN-Ha-mvQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="j7N-2Z-Ary"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNn-YB-jWp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1153" y="28"/>
         </scene>
     </scenes>
     <resources>
