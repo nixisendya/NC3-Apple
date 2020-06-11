@@ -9,9 +9,16 @@
 import UIKit
 
 class VoteLocationVC: UIViewController {
+    
+    @IBOutlet weak var colView: UICollectionView!
+    
+    let arrayOfLocation: [Location] = [Location(name: "Club", image: "Club.pdf"), Location(name: "Cinema", image: "Cinema.pdf"), Location(name: "School", image: "School.pdf"), Location(name: "Hotel", image: "Hotel.pdf"), Location(name: "Hospital", image: "Hospital.pdf"), Location(name: "Airport", image: "Airport.pdf"), Location(name: "Car", image: "Car.pdf"), Location(name: "Zoo", image: "Zoo.pdf"), Location(name: "House", image: "House.pdf"), Location(name: "Restaurant", image: "Restaurant.pdf"), Location(name: "Concert", image: "Concert.pdf")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        colView.delegate = self
+        colView.dataSource = self
 
         // Do any additional setup after loading the view.
     }
@@ -27,4 +34,26 @@ class VoteLocationVC: UIViewController {
     }
     */
 
+}
+extension VoteLocationVC: UICollectionViewDataSource, UICollectionViewDelegate{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrayOfLocation.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+         let cell = colView.dequeueReusableCell(withReuseIdentifier: "guessLoc", for: indexPath) as! guessLocCollectionCell
+        cell.locName.text = arrayOfLocation[indexPath.row].name
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(arrayOfLocation[indexPath.item].name)
+    }
+    }
+
+class guessLocCollectionCell: UICollectionViewCell{
+    
+    @IBOutlet weak var locName: UILabel!
 }
