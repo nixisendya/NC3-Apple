@@ -45,14 +45,14 @@
                                 <rect key="frame" x="44" y="728" width="326" height="52"/>
                                 <state key="normal" image="VoteButton"/>
                                 <connections>
-                                    <segue destination="0b6-7n-mK8" kind="show" id="D3y-Xv-hAr"/>
+                                    <segue destination="0b6-7n-mK8" kind="show" identifier="goToVote" id="D3y-Xv-hAr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUU-uY-AGh">
                                 <rect key="frame" x="44" y="790" width="326" height="52"/>
                                 <state key="normal" image="GuessLocationButton"/>
                                 <connections>
-                                    <segue destination="bCA-ti-SGh" kind="show" id="3J1-ZP-dTr"/>
+                                    <segue destination="bCA-ti-SGh" kind="show" identifier="goToLocation" id="3J1-ZP-dTr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6h5-A0-3Bw">
@@ -169,7 +169,7 @@ It’s time to vote!</string>
                             <rect key="frame" x="91" y="353" width="168" height="52"/>
                             <state key="normal" image="VoteSmall"/>
                             <connections>
-                                <segue destination="0b6-7n-mK8" kind="show" id="Emr-bT-H2w"/>
+                                <segue destination="0b6-7n-mK8" kind="show" identifier="goToVote" id="Emr-bT-H2w"/>
                             </connections>
                         </button>
                     </subviews>
@@ -222,7 +222,7 @@ It’s time to vote!</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="D3y-Xv-hAr"/>
+        <segue reference="Emr-bT-H2w"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Alarm1" width="87" height="115"/>

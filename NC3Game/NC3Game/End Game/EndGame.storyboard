@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gLU-PX-S5e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4XC-J5-s4k">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -8,9 +8,84 @@
     </dependencies>
     <scenes>
         <!--End GameVC-->
+        <scene sceneID="s5s-uL-LCQ">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="4XC-J5-s4k" customClass="EndGameVC" customModule="NC3Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7m3-Y3-xor">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The group voted for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5H-Gb-ZBy">
+                                <rect key="frame" x="131" y="174" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIH-xe-y8h">
+                                <rect key="frame" x="151" y="205" width="112" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="vB8-wW-tOg">
+                                <rect key="frame" x="62" y="303" width="290" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="xBY-o3-Bsx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Analyzing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgM-wO-PYT">
+                                <rect key="frame" x="0.0" y="671" width="415" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gb7-Zg-zVl">
+                                <rect key="frame" x="169" y="708.5" width="74" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="An8-yT-jde"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="124"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MagnifyingGlass" translatesAutoresizingMaskIntoConstraints="NO" id="Kje-oK-fTg">
+                                <rect key="frame" x="202" y="427" width="213" height="273"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wIH-xe-y8h" firstAttribute="top" secondItem="W5H-Gb-ZBy" secondAttribute="bottom" constant="10" id="7TF-N1-c5R"/>
+                            <constraint firstItem="jgM-wO-PYT" firstAttribute="top" secondItem="vB8-wW-tOg" secondAttribute="bottom" constant="78" id="CDX-ei-kz5"/>
+                            <constraint firstItem="Gb7-Zg-zVl" firstAttribute="top" secondItem="jgM-wO-PYT" secondAttribute="bottom" constant="10.5" id="JIY-Yj-Gfc"/>
+                            <constraint firstItem="vB8-wW-tOg" firstAttribute="centerY" secondItem="7m3-Y3-xor" secondAttribute="centerY" id="JpM-sk-Fdf"/>
+                            <constraint firstItem="W5H-Gb-ZBy" firstAttribute="top" secondItem="cCQ-51-1b5" secondAttribute="top" constant="130" id="KP2-f2-ca4"/>
+                            <constraint firstItem="jgM-wO-PYT" firstAttribute="centerX" secondItem="vB8-wW-tOg" secondAttribute="centerX" id="Pnk-sw-vb6"/>
+                            <constraint firstItem="Gb7-Zg-zVl" firstAttribute="leading" secondItem="cCQ-51-1b5" secondAttribute="leading" constant="169" id="hCN-gN-imh"/>
+                            <constraint firstItem="wIH-xe-y8h" firstAttribute="centerX" secondItem="W5H-Gb-ZBy" secondAttribute="centerX" id="nBx-rI-3hX"/>
+                            <constraint firstItem="W5H-Gb-ZBy" firstAttribute="centerX" secondItem="7m3-Y3-xor" secondAttribute="centerX" id="nLX-to-z5L"/>
+                            <constraint firstItem="vB8-wW-tOg" firstAttribute="leading" secondItem="cCQ-51-1b5" secondAttribute="leading" constant="62" id="r46-g3-AXp"/>
+                            <constraint firstItem="jgM-wO-PYT" firstAttribute="centerX" secondItem="wIH-xe-y8h" secondAttribute="centerX" id="w8T-L0-EHm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cCQ-51-1b5"/>
+                    </view>
+                    <connections>
+                        <outlet property="magnifyingGlassImage" destination="Kje-oK-fTg" id="1EC-KA-PF0"/>
+                        <outlet property="playerAvatar" destination="vB8-wW-tOg" id="WR2-f8-p2g"/>
+                        <outlet property="playerNameLabel" destination="wIH-xe-y8h" id="mS5-jK-B4D"/>
+                        <outlet property="timerLabel" destination="Gb7-Zg-zVl" id="FZG-Ca-8hz"/>
+                        <segue destination="gLU-PX-S5e" kind="show" identifier="goToDetectiveWin" id="9vr-6p-dqx"/>
+                        <segue destination="6KM-UR-vdQ" kind="show" identifier="goToLose" id="fnf-In-23e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IpY-oK-QDT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-933.33333333333337" y="-162.05357142857142"/>
+        </scene>
+        <!--Detective Win View Controller-->
         <scene sceneID="CrQ-uQ-i1R">
             <objects>
-                <viewController id="gLU-PX-S5e" customClass="EndGameVC" customModule="NC3Game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetectiveWin" modalPresentationStyle="fullScreen" id="gLU-PX-S5e" customClass="DetectiveWinViewController" customModule="NC3Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6si-um-z5l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,11 +107,17 @@ THE SPY</string>
                                 <rect key="frame" x="31" y="810" width="267" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="playAgain"/>
+                                <connections>
+                                    <segue destination="Bpl-ed-EAF" kind="show" identifier="goToAddPlayer" id="uRZ-mk-Si8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5R-h0-hcn">
                                 <rect key="frame" x="316" y="810" width="66" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="homeButton"/>
+                                <connections>
+                                    <segue destination="jDu-aF-pRY" kind="show" identifier="goToHome" id="pK7-nT-NV8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Good job detectives," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REk-JM-2tk">
                                 <rect key="frame" x="100" y="74" width="214" height="29"/>
@@ -49,71 +130,132 @@ THE SPY</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="U6Y-zt-NJJ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8lY-7O-q7Q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HgL-Jd-Ota" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10.144927536231885" y="-162.05357142857142"/>
+            <point key="canvasLocation" x="-45" y="-591"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPlayer-->
+        <scene sceneID="vRO-2x-qa8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddPlayer" id="Bpl-ed-EAF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eOS-T3-tSt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wkv-ML-P4D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947" y="-490"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="hrR-Nv-0qI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="jDu-aF-pRY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="CNP-Rf-IYT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IrJ-yI-nBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="-266"/>
+        </scene>
+        <!--Win View Controller-->
         <scene sceneID="rr9-FA-SSE">
             <objects>
-                <viewController id="6KM-UR-vdQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpyWin" modalPresentationStyle="fullScreen" id="6KM-UR-vdQ" customClass="WinViewController" customModule="NC3Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mp4-g8-bo9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Uh-Oh!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJs-mA-hdL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Uh-Oh!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJs-mA-hdL">
                                 <rect key="frame" x="168" y="80" width="79" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qF-aI-Dto">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qF-aI-Dto">
                                 <rect key="frame" x="91" y="117" width="232" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118" id="n8j-6q-84Y"/>
+                                </constraints>
                                 <string key="text">THE SPY
 GOT AWAY</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gotAway" translatesAutoresizingMaskIntoConstraints="NO" id="0G3-Mh-sM8">
-                                <rect key="frame" x="0.0" y="393" width="414" height="416"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gotAway" translatesAutoresizingMaskIntoConstraints="NO" id="0G3-Mh-sM8">
+                                <rect key="frame" x="0.0" y="393" width="414" height="405"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DIDI THE SPY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxB-Rd-7vs">
-                                <rect key="frame" x="155" y="364" width="105" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIDI THE SPY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxB-Rd-7vs">
+                                <rect key="frame" x="0.0" y="364" width="414" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MwX-vR-64P">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MwX-vR-64P">
                                 <rect key="frame" x="32" y="810" width="267" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="267" id="wzg-dZ-HtF"/>
+                                </constraints>
                                 <state key="normal" image="playAgain"/>
+                                <connections>
+                                    <segue destination="Bpl-ed-EAF" kind="show" identifier="goToAddPlayer" id="dlg-bk-9kP"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jus-Wq-RgK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jus-Wq-RgK">
                                 <rect key="frame" x="317" y="810" width="66" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="homeButton"/>
+                                <connections>
+                                    <segue destination="jDu-aF-pRY" kind="show" identifier="goToHome" id="438-gR-6p2"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="7Rw-BI-pM2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="7Rw-BI-pM2">
                                 <rect key="frame" x="138" y="243" width="139" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="rI4-UR-SLK"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mxB-Rd-7vs" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" id="3JA-HM-q5j"/>
+                            <constraint firstItem="mxB-Rd-7vs" firstAttribute="centerX" secondItem="7Rw-BI-pM2" secondAttribute="centerX" id="7ch-V1-2Pt"/>
+                            <constraint firstItem="mxB-Rd-7vs" firstAttribute="top" secondItem="7Rw-BI-pM2" secondAttribute="bottom" constant="5" id="98c-Z1-UfF"/>
+                            <constraint firstItem="MwX-vR-64P" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" constant="32" id="ByQ-g6-hj0"/>
+                            <constraint firstItem="1qF-aI-Dto" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" constant="91" id="Fvq-hv-FQi"/>
+                            <constraint firstItem="MwX-vR-64P" firstAttribute="bottom" secondItem="Axq-Mm-Kgv" secondAttribute="bottom" id="I3d-FU-e2p"/>
+                            <constraint firstItem="0G3-Mh-sM8" firstAttribute="leading" secondItem="mxB-Rd-7vs" secondAttribute="leading" id="I3m-rb-Dxn"/>
+                            <constraint firstItem="7Rw-BI-pM2" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" constant="138" id="My4-YJ-fZR"/>
+                            <constraint firstItem="1qF-aI-Dto" firstAttribute="centerX" secondItem="YJs-mA-hdL" secondAttribute="centerX" id="NbB-8X-PAg"/>
+                            <constraint firstItem="YJs-mA-hdL" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" constant="168" id="O4v-cg-Jhv"/>
+                            <constraint firstItem="7Rw-BI-pM2" firstAttribute="top" secondItem="1qF-aI-Dto" secondAttribute="bottom" constant="8" id="Vse-dF-kJR"/>
+                            <constraint firstItem="1qF-aI-Dto" firstAttribute="top" secondItem="YJs-mA-hdL" secondAttribute="bottom" constant="8" id="WwW-j4-4su"/>
+                            <constraint firstItem="YJs-mA-hdL" firstAttribute="centerX" secondItem="mp4-g8-bo9" secondAttribute="centerX" id="X0v-Fr-3et"/>
+                            <constraint firstItem="jus-Wq-RgK" firstAttribute="top" secondItem="MwX-vR-64P" secondAttribute="top" id="cKs-Z9-u6u"/>
+                            <constraint firstItem="0G3-Mh-sM8" firstAttribute="top" secondItem="mxB-Rd-7vs" secondAttribute="bottom" constant="8" id="eg9-sA-htD"/>
+                            <constraint firstItem="YJs-mA-hdL" firstAttribute="top" secondItem="Axq-Mm-Kgv" secondAttribute="top" constant="36" id="gcv-U8-MSN"/>
+                            <constraint firstItem="mxB-Rd-7vs" firstAttribute="centerX" secondItem="1qF-aI-Dto" secondAttribute="centerX" id="nB8-hF-VyL"/>
+                            <constraint firstItem="Axq-Mm-Kgv" firstAttribute="trailing" secondItem="mxB-Rd-7vs" secondAttribute="trailing" id="oeT-wn-X61"/>
+                            <constraint firstItem="jus-Wq-RgK" firstAttribute="leading" secondItem="MwX-vR-64P" secondAttribute="trailing" constant="18" id="z0v-3V-qUx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Axq-Mm-Kgv"/>
                     </view>
+                    <navigationItem key="navigationItem" id="QFD-cb-wnL"/>
+                    <connections>
+                        <outlet property="avatarSpyImage" destination="7Rw-BI-pM2" id="zvi-KN-4ve"/>
+                        <outlet property="nameSpyImage" destination="mxB-Rd-7vs" id="qHY-T4-4Nq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vww-Sg-jL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="740.57971014492762" y="-162.05357142857142"/>
+            <point key="canvasLocation" x="-45" y="98"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pK7-nT-NV8"/>
+        <segue reference="uRZ-mk-Si8"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="Avatar" width="142" height="146"/>
+        <image name="MagnifyingGlass" width="222" height="329"/>
         <image name="caught" width="414" height="523"/>
         <image name="gotAway" width="414" height="405"/>
         <image name="homeButton" width="66" height="52"/>

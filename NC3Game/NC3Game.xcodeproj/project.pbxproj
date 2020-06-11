@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E49C4172491EE9D0011F4B4 /* VoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E49C4162491EE9D0011F4B4 /* VoteCollectionViewCell.swift */; };
 		3E6CB1D4248F5CE100BF8816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB1D3248F5CE100BF8816 /* AppDelegate.swift */; };
 		3E6CB1D6248F5CE100BF8816 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB1D5248F5CE100BF8816 /* SceneDelegate.swift */; };
 		3E6CB1D8248F5CE100BF8816 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB1D7248F5CE100BF8816 /* ViewController.swift */; };
@@ -31,10 +32,13 @@
 		3E6CB210248F832000BF8816 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB20F248F832000BF8816 /* Player.swift */; };
 		3E6CB212248FC44B00BF8816 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB211248FC44B00BF8816 /* CardCollectionViewCell.swift */; };
 		3E7AB4A9248FCB4400486651 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7AB4A8248FCB4400486651 /* Card.swift */; };
+		3EC4E39D2492313200CD92E8 /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4E39C2492313200CD92E8 /* WinViewController.swift */; };
+		3EC4E39F2492345200CD92E8 /* DetectiveWinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4E39E2492345200CD92E8 /* DetectiveWinViewController.swift */; };
 		C11182FB248FFB38004605C9 /* GudanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11182FA248FFB38004605C9 /* GudanceVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E49C4162491EE9D0011F4B4 /* VoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		3E6CB1D0248F5CE100BF8816 /* NC3Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NC3Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E6CB1D3248F5CE100BF8816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E6CB1D5248F5CE100BF8816 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 		3E6CB20F248F832000BF8816 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		3E6CB211248FC44B00BF8816 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		3E7AB4A8248FCB4400486651 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		3EC4E39C2492313200CD92E8 /* WinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
+		3EC4E39E2492345200CD92E8 /* DetectiveWinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectiveWinViewController.swift; sourceTree = "<group>"; };
 		C11182FA248FFB38004605C9 /* GudanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GudanceVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +153,7 @@
 			children = (
 				3E6CB1FB248F5E7300BF8816 /* Vote.storyboard */,
 				3E6CB1FD248F5E8B00BF8816 /* VoteVC.swift */,
+				3E49C4162491EE9D0011F4B4 /* VoteCollectionViewCell.swift */,
 			);
 			path = VoteSpy;
 			sourceTree = "<group>";
@@ -156,6 +163,8 @@
 			children = (
 				3E6CB208248F5F5900BF8816 /* EndGameVC.swift */,
 				3E6CB20A248F5F6500BF8816 /* EndGame.storyboard */,
+				3EC4E39C2492313200CD92E8 /* WinViewController.swift */,
+				3EC4E39E2492345200CD92E8 /* DetectiveWinViewController.swift */,
 			);
 			path = "End Game";
 			sourceTree = "<group>";
@@ -266,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EC4E39D2492313200CD92E8 /* WinViewController.swift in Sources */,
 				C11182FB248FFB38004605C9 /* GudanceVC.swift in Sources */,
 				3E6CB1FA248F5E3C00BF8816 /* GameplayVC.swift in Sources */,
 				3E6CB1D8248F5CE100BF8816 /* ViewController.swift in Sources */,
@@ -277,7 +287,9 @@
 				3E6CB212248FC44B00BF8816 /* CardCollectionViewCell.swift in Sources */,
 				3E6CB1F6248F5E1200BF8816 /* PickCardVC.swift in Sources */,
 				3E7AB4A9248FCB4400486651 /* Card.swift in Sources */,
+				3EC4E39F2492345200CD92E8 /* DetectiveWinViewController.swift in Sources */,
 				3E6CB1D6248F5CE100BF8816 /* SceneDelegate.swift in Sources */,
+				3E49C4172491EE9D0011F4B4 /* VoteCollectionViewCell.swift in Sources */,
 				3E6CB1F2248F5DCC00BF8816 /* AddPlayerVC.swift in Sources */,
 				3E6CB201248F5EEE00BF8816 /* VoteLocationVC.swift in Sources */,
 				3E6CB20D248F662500BF8816 /* PlayerCollectionViewCell.swift in Sources */,

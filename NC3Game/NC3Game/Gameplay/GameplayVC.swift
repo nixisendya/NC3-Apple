@@ -22,6 +22,8 @@ class GameplayVC: UIViewController {
     @IBOutlet weak var viewGradient: UIView!
     
     var firstPlayer: String!
+    var arrayOfPlayers: [Player]!
+    var indexSpy: Int!
     
     var arrayOfSampleQuestions: [String] = [
     "Have you been to this place before?",
@@ -57,6 +59,15 @@ class GameplayVC: UIViewController {
         labelStartPlayer.text = "\(firstPlayer!), start off by asking a question!"
         
         viewGradient.layer.mask = gradientMaskLayer
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToVote" {
+            if let destinationVC = segue.destination as? VoteVC {
+                destinationVC.arrayOfPlayers = arrayOfPlayers
+                destinationVC.indexSpy = indexSpy
+            }
+        }
     }
 
     @IBAction func buttonNextSuggestionPressed(_ sender: Any) {

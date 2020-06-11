@@ -139,7 +139,7 @@ extension AddPlayerVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBAction func joinTeamButtonPressed(_ sender: Any) {
         let name: String = nameTextField.text ?? "Name"
-        let newPlayer = Player(name: name, avatar: UIImage(named: "Avatar")!)
+        let newPlayer = Player(name: name, avatar: UIImage(named: "Avatar")!, isSpy: false)
         players.append(newPlayer)
         
         transitionIDout()

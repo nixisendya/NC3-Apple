@@ -28,6 +28,7 @@ class PickCardVC: UIViewController {
     var arrayOfLocations: [String] = ["Club", "Cinema", "School", "Hotel", "Hospital", "Airport", "Car"]
     
     var randomPerson = ""
+    var randomPersonIndex = 0
     var randomLocation = ""
     
     var firstToAsk = ""
@@ -54,6 +55,8 @@ class PickCardVC: UIViewController {
         if segue.identifier == "goToGameplay" {
             if let destinationVC = segue.destination as? GameplayVC {
                 destinationVC.firstPlayer = firstToAsk
+                destinationVC.arrayOfPlayers = arrayOfPlayers
+                destinationVC.indexSpy = randomPersonIndex
             }
         }
     }
@@ -144,7 +147,8 @@ extension PickCardVC: UICollectionViewDelegate, UICollectionViewDataSource {
         arrayOfCards[indexPath.row].isOpened = true
         arrayOfCards[indexPath.row].openedBy = randomPerson
         
-        showCard(index: indexPath.row)
+        showCard(index: indexPath.row, chosenBy: randomPerson)
+
         arrayOfPlayersName.removeAll { $0 == randomPerson }
         orderNameToPickCard()
         
@@ -152,12 +156,26 @@ extension PickCardVC: UICollectionViewDelegate, UICollectionViewDataSource {
         cardCollectionView.reloadData()
     }
     
-    func showCard(index: Int) {
+    func showCard(index: Int, chosenBy: String) {
         
         let cardChosen = arrayOfCards[index]
         
         if cardChosen.isSpy {
             print("Show Spy Card Chosen View")
+            
+            var currentIndex = 0
+            
+            for player in arrayOfPlayers
+            {
+                if player.name == randomPerson {
+                    print("Found \(player.name) for index \(currentIndex)")
+                    arrayOfPlayers[currentIndex].isSpy = true
+                    randomPersonIndex = currentIndex
+                    break
+                }
+
+                currentIndex += 1
+            }
             
             overlayView.backgroundColor = .black
             overlayView.alpha = 0.8
