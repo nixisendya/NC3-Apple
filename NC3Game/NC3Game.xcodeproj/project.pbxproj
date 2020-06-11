@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3E49C4172491EE9D0011F4B4 /* VoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E49C4162491EE9D0011F4B4 /* VoteCollectionViewCell.swift */; };
+		3E4EE14E24925E3000BA9AC3 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4EE14D24925E3000BA9AC3 /* PlaySound.swift */; };
+		3E4EE1512492685400BA9AC3 /* WalkieTalkie.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E4EE1502492685400BA9AC3 /* WalkieTalkie.wav */; };
+		3E4EE1532492733600BA9AC3 /* WalkieTalkie2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E4EE1522492733600BA9AC3 /* WalkieTalkie2.mp3 */; };
 		3E6CB1D4248F5CE100BF8816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB1D3248F5CE100BF8816 /* AppDelegate.swift */; };
 		3E6CB1D6248F5CE100BF8816 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB1D5248F5CE100BF8816 /* SceneDelegate.swift */; };
 		3E6CB1D8248F5CE100BF8816 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB1D7248F5CE100BF8816 /* ViewController.swift */; };
@@ -39,6 +42,9 @@
 
 /* Begin PBXFileReference section */
 		3E49C4162491EE9D0011F4B4 /* VoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		3E4EE14D24925E3000BA9AC3 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		3E4EE1502492685400BA9AC3 /* WalkieTalkie.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WalkieTalkie.wav; sourceTree = "<group>"; };
+		3E4EE1522492733600BA9AC3 /* WalkieTalkie2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkieTalkie2.mp3; sourceTree = "<group>"; };
 		3E6CB1D0248F5CE100BF8816 /* NC3Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NC3Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E6CB1D3248F5CE100BF8816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E6CB1D5248F5CE100BF8816 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E4EE14C24925E2100BA9AC3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3E4EE14D24925E3000BA9AC3 /* PlaySound.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3E4EE14F2492684300BA9AC3 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				3E4EE1522492733600BA9AC3 /* WalkieTalkie2.mp3 */,
+				3E4EE1502492685400BA9AC3 /* WalkieTalkie.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		3E6CB1C7248F5CE100BF8816 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +123,8 @@
 		3E6CB1D2248F5CE100BF8816 /* NC3Game */ = {
 			isa = PBXGroup;
 			children = (
+				3E4EE14F2492684300BA9AC3 /* Sounds */,
+				3E4EE14C24925E2100BA9AC3 /* Helpers */,
 				3E6CB20E248F831100BF8816 /* Models */,
 				3E6CB1FF248F5ED600BF8816 /* VoteLocation */,
 				3E6CB1EC248F5D5800BF8816 /* How To Play */,
@@ -255,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E4EE1532492733600BA9AC3 /* WalkieTalkie2.mp3 in Resources */,
 				3E6CB1FC248F5E7300BF8816 /* Vote.storyboard in Resources */,
 				3E6CB1F8248F5E2800BF8816 /* Gameplay.storyboard in Resources */,
 				3E6CB20B248F5F6500BF8816 /* EndGame.storyboard in Resources */,
@@ -263,6 +289,7 @@
 				3E6CB1EE248F5D6C00BF8816 /* AddPlayer.storyboard in Resources */,
 				3E6CB207248F5F3B00BF8816 /* HowToPlay.storyboard in Resources */,
 				3E6CB203248F5F0700BF8816 /* VoteLocation.storyboard in Resources */,
+				3E4EE1512492685400BA9AC3 /* WalkieTalkie.wav in Resources */,
 				3E6CB1DD248F5CE200BF8816 /* Assets.xcassets in Resources */,
 				3E6CB1DB248F5CE100BF8816 /* Main.storyboard in Resources */,
 			);
@@ -275,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E4EE14E24925E3000BA9AC3 /* PlaySound.swift in Sources */,
 				3EC4E39D2492313200CD92E8 /* WinViewController.swift in Sources */,
 				C11182FB248FFB38004605C9 /* GudanceVC.swift in Sources */,
 				3E6CB1FA248F5E3C00BF8816 /* GameplayVC.swift in Sources */,
