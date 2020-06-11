@@ -144,16 +144,24 @@ extension PickCardVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("didSelectItemAt: \(indexPath)")
         
-        arrayOfCards[indexPath.row].isOpened = true
-        arrayOfCards[indexPath.row].openedBy = randomPerson
-        
-        showCard(index: indexPath.row, chosenBy: randomPerson)
+        if arrayOfCards[indexPath.row].isOpened {
+            let alertController = UIAlertController(title: "Enveloppe Opened!", message:
+                "Please select another enveloppe!", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
 
-        arrayOfPlayersName.removeAll { $0 == randomPerson }
-        orderNameToPickCard()
-        
-        
-        cardCollectionView.reloadData()
+            self.present(alertController, animated: true, completion: nil)
+        } else {
+            arrayOfCards[indexPath.row].isOpened = true
+            arrayOfCards[indexPath.row].openedBy = randomPerson
+            
+            showCard(index: indexPath.row, chosenBy: randomPerson)
+
+            arrayOfPlayersName.removeAll { $0 == randomPerson }
+            orderNameToPickCard()
+            
+            
+            cardCollectionView.reloadData()
+        }
     }
     
     func showCard(index: Int, chosenBy: String) {

@@ -19,7 +19,7 @@ class WinViewController: UIViewController {
         super.viewDidLoad()
 
         avatarSpyImage.image = realSpy.avatar
-        nameSpyImage.text = realSpy.name
+        nameSpyImage.text = "\(realSpy.name) was the spy!"
         // Do any additional setup after loading the view.
     }
     

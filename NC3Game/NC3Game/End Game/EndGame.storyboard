@@ -164,8 +164,8 @@ THE SPY</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Uh-Oh!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJs-mA-hdL">
-                                <rect key="frame" x="168" y="80" width="79" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uh-Oh!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJs-mA-hdL">
+                                <rect key="frame" x="0.0" y="80" width="414" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -219,19 +219,20 @@ GOT AWAY</string>
                             <constraint firstItem="mxB-Rd-7vs" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" id="3JA-HM-q5j"/>
                             <constraint firstItem="mxB-Rd-7vs" firstAttribute="centerX" secondItem="7Rw-BI-pM2" secondAttribute="centerX" id="7ch-V1-2Pt"/>
                             <constraint firstItem="mxB-Rd-7vs" firstAttribute="top" secondItem="7Rw-BI-pM2" secondAttribute="bottom" constant="5" id="98c-Z1-UfF"/>
+                            <constraint firstItem="YJs-mA-hdL" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" id="9Ur-PX-S0s"/>
                             <constraint firstItem="MwX-vR-64P" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" constant="32" id="ByQ-g6-hj0"/>
                             <constraint firstItem="1qF-aI-Dto" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" constant="91" id="Fvq-hv-FQi"/>
                             <constraint firstItem="MwX-vR-64P" firstAttribute="bottom" secondItem="Axq-Mm-Kgv" secondAttribute="bottom" id="I3d-FU-e2p"/>
                             <constraint firstItem="0G3-Mh-sM8" firstAttribute="leading" secondItem="mxB-Rd-7vs" secondAttribute="leading" id="I3m-rb-Dxn"/>
                             <constraint firstItem="7Rw-BI-pM2" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" constant="138" id="My4-YJ-fZR"/>
                             <constraint firstItem="1qF-aI-Dto" firstAttribute="centerX" secondItem="YJs-mA-hdL" secondAttribute="centerX" id="NbB-8X-PAg"/>
-                            <constraint firstItem="YJs-mA-hdL" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" constant="168" id="O4v-cg-Jhv"/>
                             <constraint firstItem="7Rw-BI-pM2" firstAttribute="top" secondItem="1qF-aI-Dto" secondAttribute="bottom" constant="8" id="Vse-dF-kJR"/>
                             <constraint firstItem="1qF-aI-Dto" firstAttribute="top" secondItem="YJs-mA-hdL" secondAttribute="bottom" constant="8" id="WwW-j4-4su"/>
                             <constraint firstItem="YJs-mA-hdL" firstAttribute="centerX" secondItem="mp4-g8-bo9" secondAttribute="centerX" id="X0v-Fr-3et"/>
                             <constraint firstItem="jus-Wq-RgK" firstAttribute="top" secondItem="MwX-vR-64P" secondAttribute="top" id="cKs-Z9-u6u"/>
                             <constraint firstItem="0G3-Mh-sM8" firstAttribute="top" secondItem="mxB-Rd-7vs" secondAttribute="bottom" constant="8" id="eg9-sA-htD"/>
                             <constraint firstItem="YJs-mA-hdL" firstAttribute="top" secondItem="Axq-Mm-Kgv" secondAttribute="top" constant="36" id="gcv-U8-MSN"/>
+                            <constraint firstItem="Axq-Mm-Kgv" firstAttribute="trailing" secondItem="YJs-mA-hdL" secondAttribute="trailing" id="m6b-3L-ob7"/>
                             <constraint firstItem="mxB-Rd-7vs" firstAttribute="centerX" secondItem="1qF-aI-Dto" secondAttribute="centerX" id="nB8-hF-VyL"/>
                             <constraint firstItem="Axq-Mm-Kgv" firstAttribute="trailing" secondItem="mxB-Rd-7vs" secondAttribute="trailing" id="oeT-wn-X61"/>
                             <constraint firstItem="jus-Wq-RgK" firstAttribute="leading" secondItem="MwX-vR-64P" secondAttribute="trailing" constant="18" id="z0v-3V-qUx"/>
@@ -250,8 +251,8 @@ GOT AWAY</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pK7-nT-NV8"/>
-        <segue reference="uRZ-mk-Si8"/>
+        <segue reference="438-gR-6p2"/>
+        <segue reference="dlg-bk-9kP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Avatar" width="142" height="146"/>
