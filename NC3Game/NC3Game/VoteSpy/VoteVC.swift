@@ -37,13 +37,16 @@ class VoteVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           if segue.identifier == "goToEndgame" {
-               if let destinationVC = segue.destination as? EndGameVC {
-                    destinationVC.votedPlayer = votedPlayer
-                    destinationVC.realSpy = playerSpy
-               }
-           }
-       }
+        if segue.identifier == "goToEndgame" {
+            if let destinationVC = segue.destination as? EndGameVC {
+                destinationVC.votedPlayer = votedPlayer
+                destinationVC.realSpy = playerSpy
+                destinationVC.firstLabel = "The group voted for"
+                destinationVC.secondLabel = votedPlayer.name
+                destinationVC.thirdImage = "Avatar"
+            }
+        }
+    }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         overlayView.removeFromSuperview()

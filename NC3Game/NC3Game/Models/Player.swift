@@ -13,4 +13,9 @@ struct Player {
     var name: String
     var avatar: UIImage
     var isSpy: Bool
+
+}
+struct Location {
+    var name: String
+    var image: String
 }

@@ -25,6 +25,8 @@ class GameplayVC: UIViewController {
     var arrayOfPlayers: [Player]!
     var indexSpy: Int!
     
+    var randomLocation: String!
+    
     var arrayOfSampleQuestions: [String] = [
     "Have you been to this place before?",
     "How did you get to this location?",
@@ -66,6 +68,14 @@ class GameplayVC: UIViewController {
             if let destinationVC = segue.destination as? VoteVC {
                 destinationVC.arrayOfPlayers = arrayOfPlayers
                 destinationVC.indexSpy = indexSpy
+            }
+        }
+
+        if segue.identifier == "goToLocation" {
+            if let destinationVC = segue.destination as? VoteLocationVC {
+                destinationVC.arrayOfPlayers = arrayOfPlayers
+                destinationVC.indexSpy = indexSpy
+                destinationVC.randomLocation = randomLocation
             }
         }
     }

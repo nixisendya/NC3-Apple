@@ -28,11 +28,11 @@ class PickCardVC: UIViewController {
     var arrayOfPlayersName: [String] = []
     var arrayOfCards: [Card] = []
     
-    var arrayOfLocations: [String] = ["Club", "Cinema", "School", "Hotel", "Hospital", "Airport", "Car"]
+    let arrayOfLocation: [Location] = [Location(name: "Club", image: "Club.pdf"), Location(name: "Cinema", image: "Cinema.pdf"), Location(name: "School", image: "School.pdf"), Location(name: "Hotel", image: "Hotel.pdf"), Location(name: "Hospital", image: "Hospital.pdf"), Location(name: "Airport", image: "Airport.pdf"), Location(name: "Car", image: "Car.pdf"), Location(name: "Zoo", image: "Zoo.pdf"), Location(name: "House", image: "House.pdf"), Location(name: "Restaurant", image: "Restaurant.pdf"), Location(name: "Concert", image: "Concert.pdf")]
     
     var randomPerson = ""
     var randomPersonIndex = 0
-    var randomLocation = ""
+    var randomLocation: Location!
     
     var firstToAsk = ""
 
@@ -63,13 +63,14 @@ class PickCardVC: UIViewController {
                 destinationVC.firstPlayer = firstToAsk
                 destinationVC.arrayOfPlayers = arrayOfPlayers
                 destinationVC.indexSpy = randomPersonIndex
+                destinationVC.randomLocation = randomLocation.name
             }
         }
     }
     
     func generateCards() {
         
-        randomLocation = arrayOfLocations.randomElement()!
+        randomLocation = arrayOfLocation.randomElement()!
         print(randomLocation)
         let indexSpy = Int.random(in: 0..<arrayOfPlayers.count)
         
@@ -77,10 +78,10 @@ class PickCardVC: UIViewController {
         
         for n in 0..<arrayOfPlayers.count {
             if n == indexSpy {
-                let card = Card(isOpened: false, openedBy: "", location: randomLocation, isSpy: true)
+                let card = Card(isOpened: false, openedBy: "", location: randomLocation.name, isSpy: true)
                 arrayOfCards.append(card)
             } else {
-                let card = Card(isOpened: false, openedBy: "", location: randomLocation, isSpy: false)
+                let card = Card(isOpened: false, openedBy: "", location: randomLocation.name, isSpy: false)
                 arrayOfCards.append(card)
             }
         }
@@ -208,7 +209,9 @@ extension PickCardVC: UICollectionViewDelegate, UICollectionViewDataSource {
             view.addSubview(overlayView)
                 
             cardLocationView.center = self.view.center
-            locationLabel.text = randomLocation
+            locationLabel.text = randomLocation.name
+            locationImage.image = UIImage(named: randomLocation.image)
+            
             
             view.addSubview(cardLocationView)
         }
