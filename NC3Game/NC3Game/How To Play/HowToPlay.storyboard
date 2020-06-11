@@ -40,9 +40,8 @@
                                                     <color key="pageIndicatorTintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="currentPageIndicatorTintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 </pageControl>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOl-f7-u55">
-                                                    <rect key="frame" x="0.0" y="448" width="414" height="351"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOl-f7-u55">
+                                                    <rect key="frame" x="0.0" y="440" width="414" height="343"/>
                                                     <color key="backgroundColor" red="0.34509803921568627" green="0.62352941176470589" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TS5-ai-MfK">
@@ -52,11 +51,17 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gambarHTP1" id="ARc-T3-w8l">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gambarHTP1" id="ARc-T3-w8l">
                                                     <rect key="frame" x="0.0" y="86" width="414" height="354"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ZOl-f7-u55" secondAttribute="trailing" id="Cip-GH-lbP"/>
+                                                <constraint firstItem="ZOl-f7-u55" firstAttribute="leading" secondItem="Pvy-6E-8zT" secondAttribute="leading" id="DBG-Ox-Mu3"/>
+                                                <constraint firstItem="ZOl-f7-u55" firstAttribute="top" secondItem="ARc-T3-w8l" secondAttribute="bottom" id="Z1x-1K-Qrb"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZOl-f7-u55" secondAttribute="bottom" id="pXY-3B-Nvk"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="783"/>
                                         <connections>
