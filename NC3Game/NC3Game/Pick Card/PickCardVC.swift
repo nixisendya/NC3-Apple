@@ -28,6 +28,7 @@ class PickCardVC: UIViewController {
     var arrayOfLocations: [String] = ["Club.pdf", "Cinema.pdf", "School.pdf", "Hotel.pdf", "Hospital.pdf", "Airport.pdf", "Car.pdf", "Zoo.pdf", "House.pdf", "Restaurant.pdf", "Concert.pdf"]
     
     var randomPerson = ""
+    var randomPersonIndex = 0
     var randomLocation = ""
     
     var firstToAsk = ""
@@ -54,6 +55,8 @@ class PickCardVC: UIViewController {
         if segue.identifier == "goToGameplay" {
             if let destinationVC = segue.destination as? GameplayVC {
                 destinationVC.firstPlayer = firstToAsk
+                destinationVC.arrayOfPlayers = arrayOfPlayers
+                destinationVC.indexSpy = randomPersonIndex
             }
         }
     }
@@ -141,23 +144,46 @@ extension PickCardVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("didSelectItemAt: \(indexPath)")
         
-        arrayOfCards[indexPath.row].isOpened = true
-        arrayOfCards[indexPath.row].openedBy = randomPerson
-        
-        showCard(index: indexPath.row)
-        arrayOfPlayersName.removeAll { $0 == randomPerson }
-        orderNameToPickCard()
-        
-        
-        cardCollectionView.reloadData()
+        if arrayOfCards[indexPath.row].isOpened {
+            let alertController = UIAlertController(title: "Enveloppe Opened!", message:
+                "Please select another enveloppe!", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+
+            self.present(alertController, animated: true, completion: nil)
+        } else {
+            arrayOfCards[indexPath.row].isOpened = true
+            arrayOfCards[indexPath.row].openedBy = randomPerson
+            
+            showCard(index: indexPath.row, chosenBy: randomPerson)
+
+            arrayOfPlayersName.removeAll { $0 == randomPerson }
+            orderNameToPickCard()
+            
+            
+            cardCollectionView.reloadData()
+        }
     }
     
-    func showCard(index: Int) {
+    func showCard(index: Int, chosenBy: String) {
         
         let cardChosen = arrayOfCards[index]
         
         if cardChosen.isSpy {
             print("Show Spy Card Chosen View")
+            
+            var currentIndex = 0
+            
+            for player in arrayOfPlayers
+            {
+                if player.name == randomPerson {
+                    print("Found \(player.name) for index \(currentIndex)")
+                    arrayOfPlayers[currentIndex].isSpy = true
+                    randomPersonIndex = currentIndex
+                    break
+                }
+
+                currentIndex += 1
+            }
             
             overlayView.backgroundColor = .black
             overlayView.alpha = 0.8

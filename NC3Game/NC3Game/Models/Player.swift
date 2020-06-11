@@ -12,5 +12,5 @@ import UIKit
 struct Player {
     var name: String
     var avatar: UIImage
-    //var role: String
+    var isSpy: Bool
 }
