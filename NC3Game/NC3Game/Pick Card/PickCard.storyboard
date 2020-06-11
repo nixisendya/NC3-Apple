@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeaderPickCard" translatesAutoresizingMaskIntoConstraints="NO" id="mvH-na-a6k">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeaderVer2" translatesAutoresizingMaskIntoConstraints="NO" id="mvH-na-a6k">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="317"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="317" id="5Xg-gX-QxF"/>
@@ -64,13 +64,17 @@
                                     <outlet property="delegate" destination="tDd-LN-5bF" id="wWN-JK-4ai"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name, pick a card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shM-sw-wZM">
-                                <rect key="frame" x="243" y="79" width="148" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name, pick a card" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shM-sw-wZM">
+                                <rect key="frame" x="243" y="60" width="148" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WalkieTalkie" translatesAutoresizingMaskIntoConstraints="NO" id="Dmw-eL-wih">
+                                <rect key="frame" x="39" y="90" width="173" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -93,6 +97,7 @@
                         <outlet property="locationLabel" destination="fAX-DZ-p3T" id="bAy-K4-Cyi"/>
                         <outlet property="namePickCardLabel" destination="shM-sw-wZM" id="HBR-8R-7c2"/>
                         <outlet property="overlayView" destination="8oi-hl-pRP" id="fzo-PI-VOc"/>
+                        <outlet property="walkieTalkieImage" destination="Dmw-eL-wih" id="g3h-h1-q3O"/>
                         <segue destination="mhq-H8-Ue0" kind="show" identifier="goToGameplay" id="osc-FQ-ea5"/>
                     </connections>
                 </viewController>
@@ -189,10 +194,11 @@
         <image name="Cinema" width="303" height="178"/>
         <image name="EnveloppeOpen2" width="173" height="145"/>
         <image name="GameStart" width="350" height="321"/>
-        <image name="HeaderPickCard" width="414" height="317"/>
+        <image name="HeaderVer2" width="414" height="317"/>
         <image name="LocationCard" width="350" height="321"/>
         <image name="OKButton" width="203" height="47"/>
         <image name="SpyCard" width="328" height="371"/>
         <image name="StartInvestigate" width="266" height="47"/>
+        <image name="WalkieTalkie" width="169" height="222"/>
     </resources>
 </document>
