@@ -36,7 +36,7 @@ class HowToPlayVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     @IBAction func homeButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "goToHome", sender: self)
+        performSegue(withIdentifier: "unwindToHome", sender: self)
     }
     
 }

@@ -18,6 +18,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHH-Lj-Tcr">
                                 <rect key="frame" x="20" y="54" width="34" height="34"/>
                                 <state key="normal" image="HomeButton"/>
+                                <connections>
+                                    <action selector="homeButtonPressed:" destination="Oqy-Im-zOa" eventType="touchUpInside" id="rSD-Q2-ONM"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Friends" translatesAutoresizingMaskIntoConstraints="NO" id="sMT-JX-PGJ">
                                 <rect key="frame" x="10" y="454" width="394" height="259"/>
@@ -137,9 +140,11 @@
                         <outlet property="timerLabel" destination="KHL-hF-Tjj" id="BPj-LX-dqT"/>
                         <outlet property="viewAlert" destination="iBS-jw-2Pe" id="RwK-Bi-lmY"/>
                         <outlet property="viewGradient" destination="dE9-75-UIL" id="2pd-Ic-qFA"/>
+                        <segue destination="gkj-CG-GOC" kind="unwind" identifier="unwindToHome" unwindAction="unwind:" id="GeR-ja-jYR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n7H-qy-tpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="gkj-CG-GOC" userLabel="Exit" sceneMemberID="exit"/>
                 <view contentMode="scaleToFill" id="iBS-jw-2Pe">
                     <rect key="frame" x="0.0" y="0.0" width="350" height="430"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

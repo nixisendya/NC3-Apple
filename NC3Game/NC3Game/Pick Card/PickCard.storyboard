@@ -75,15 +75,24 @@
                                 <rect key="frame" x="39" y="90" width="173" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nk-jH-1W3">
+                                <rect key="frame" x="20" y="49" width="34" height="34"/>
+                                <state key="normal" image="HomeButton"/>
+                                <connections>
+                                    <action selector="homeButtonPressed:" destination="tDd-LN-5bF" eventType="touchUpInside" id="Y91-2J-RTp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="mvH-na-a6k" firstAttribute="top" secondItem="rZw-aH-gBl" secondAttribute="top" id="A0Y-VP-BIV"/>
+                            <constraint firstItem="2Nk-jH-1W3" firstAttribute="top" secondItem="ZBA-Pe-QGW" secondAttribute="top" constant="5" id="SSP-mv-nXW"/>
                             <constraint firstItem="mvH-na-a6k" firstAttribute="trailing" secondItem="ZBA-Pe-QGW" secondAttribute="trailing" id="T2j-ub-eN2"/>
                             <constraint firstItem="f1x-7q-FFa" firstAttribute="trailing" secondItem="ZBA-Pe-QGW" secondAttribute="trailing" id="cyQ-s2-Gid"/>
                             <constraint firstItem="mvH-na-a6k" firstAttribute="leading" secondItem="ZBA-Pe-QGW" secondAttribute="leading" id="iSr-jK-reF"/>
                             <constraint firstAttribute="bottom" secondItem="f1x-7q-FFa" secondAttribute="bottom" id="psu-zF-k0S"/>
                             <constraint firstItem="f1x-7q-FFa" firstAttribute="top" secondItem="mvH-na-a6k" secondAttribute="bottom" constant="10" id="v5L-AG-SbG"/>
+                            <constraint firstItem="2Nk-jH-1W3" firstAttribute="leading" secondItem="ZBA-Pe-QGW" secondAttribute="leading" constant="20" id="v8y-r6-8hq"/>
                             <constraint firstItem="f1x-7q-FFa" firstAttribute="leading" secondItem="ZBA-Pe-QGW" secondAttribute="leading" id="xhX-Go-6cI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZBA-Pe-QGW"/>
@@ -99,9 +108,11 @@
                         <outlet property="overlayView" destination="8oi-hl-pRP" id="fzo-PI-VOc"/>
                         <outlet property="walkieTalkieImage" destination="Dmw-eL-wih" id="g3h-h1-q3O"/>
                         <segue destination="mhq-H8-Ue0" kind="show" identifier="goToGameplay" id="osc-FQ-ea5"/>
+                        <segue destination="PLA-2C-T8o" kind="unwind" identifier="unwindToHome" unwindAction="unwind:" id="aKT-cS-DCY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRX-J3-VdZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="PLA-2C-T8o" userLabel="Exit" sceneMemberID="exit"/>
                 <view contentMode="scaleToFill" id="mTI-EG-Qqa">
                     <rect key="frame" x="0.0" y="0.0" width="350" height="321"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -195,6 +206,7 @@
         <image name="EnveloppeOpen2" width="173" height="145"/>
         <image name="GameStart" width="350" height="321"/>
         <image name="HeaderVer2" width="414" height="317"/>
+        <image name="HomeButton" width="34" height="34"/>
         <image name="LocationCard" width="350" height="321"/>
         <image name="OKButton" width="203" height="47"/>
         <image name="SpyCard" width="328" height="371"/>

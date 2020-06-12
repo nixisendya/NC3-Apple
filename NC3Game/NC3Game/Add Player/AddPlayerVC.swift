@@ -48,6 +48,9 @@ class AddPlayerVC: UIViewController {
         }
     }
     
+    @IBAction func unwindPlayer( _ seg: UIStoryboardSegue) {
+    }
+    
     @IBAction func startGamePressed(_ sender: Any) {
         if (players.count < 3) {
             let alertController = UIAlertController(title: "Players Required", message:
@@ -58,6 +61,11 @@ class AddPlayerVC: UIViewController {
         } else {
             performSegue(withIdentifier: "goToPickCard", sender: self)
         }
+    }
+    
+    
+    @IBAction func homeButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToHome", sender: self)
     }
     
 }

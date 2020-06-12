@@ -79,7 +79,12 @@ class GameplayVC: UIViewController {
             }
         }
     }
-
+    
+    
+    @IBAction func homeButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToHome", sender: self)
+    }
+    
     @IBAction func buttonNextSuggestionPressed(_ sender: Any) {
         // Change the label based on the selected index in array
         if i >= 0 && i < arrayOfSampleQuestions.count{

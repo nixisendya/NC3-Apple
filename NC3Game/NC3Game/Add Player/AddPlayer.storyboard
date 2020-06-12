@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="WfB-Bd-Zn3">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="381"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="326"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0DP-eO-s7E">
-                                <rect key="frame" x="0.0" y="391" width="414" height="430"/>
+                                <rect key="frame" x="0.0" y="336" width="414" height="430"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="430" id="4zh-Tm-58W"/>
@@ -74,11 +74,19 @@
                                     <action selector="startGamePressed:" destination="nW0-VB-crE" eventType="touchUpInside" id="oWL-oI-im2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXv-EU-vUG">
+                                <rect key="frame" x="20" y="49" width="34" height="34"/>
+                                <state key="normal" image="HomeButton"/>
+                                <connections>
+                                    <action selector="homeButtonPressed:" destination="nW0-VB-crE" eventType="touchUpInside" id="Gz9-Ex-GYW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mQg-QT-Sew" firstAttribute="trailing" secondItem="hrp-IO-atm" secondAttribute="trailing" constant="44" id="40t-ix-Xuh"/>
                             <constraint firstItem="WfB-Bd-Zn3" firstAttribute="leading" secondItem="mQg-QT-Sew" secondAttribute="leading" id="530-GG-IJg"/>
+                            <constraint firstItem="lXv-EU-vUG" firstAttribute="leading" secondItem="mQg-QT-Sew" secondAttribute="leading" constant="20" id="Dhd-U2-Pcm"/>
                             <constraint firstItem="WfB-Bd-Zn3" firstAttribute="trailing" secondItem="mQg-QT-Sew" secondAttribute="trailing" id="EeS-7c-SdN"/>
                             <constraint firstItem="WfB-Bd-Zn3" firstAttribute="top" secondItem="PCe-SH-PG7" secondAttribute="top" id="G7E-qo-C1P"/>
                             <constraint firstItem="0DP-eO-s7E" firstAttribute="trailing" secondItem="mQg-QT-Sew" secondAttribute="trailing" id="JZa-rs-e6r"/>
@@ -86,6 +94,7 @@
                             <constraint firstItem="0DP-eO-s7E" firstAttribute="leading" secondItem="mQg-QT-Sew" secondAttribute="leading" id="aNl-vo-6gD"/>
                             <constraint firstItem="0DP-eO-s7E" firstAttribute="top" secondItem="WfB-Bd-Zn3" secondAttribute="bottom" constant="10" id="kk5-xm-oLB"/>
                             <constraint firstItem="hrp-IO-atm" firstAttribute="leading" secondItem="mQg-QT-Sew" secondAttribute="leading" constant="44" id="lHv-yS-zba"/>
+                            <constraint firstItem="lXv-EU-vUG" firstAttribute="top" secondItem="mQg-QT-Sew" secondAttribute="top" constant="5" id="yk3-LS-cGg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mQg-QT-Sew"/>
                     </view>
@@ -96,9 +105,11 @@
                         <outlet property="playerJoinButton" destination="oJv-eL-dH3" id="22z-HH-TG4"/>
                         <outlet property="viewIDCard" destination="5WY-BL-mpQ" id="KMa-s6-oET"/>
                         <segue destination="8jo-a0-zui" kind="show" identifier="goToPickCard" id="kd8-Hb-kfq"/>
+                        <segue destination="XC5-d8-4s2" kind="unwind" identifier="unwindToHome" unwindAction="unwind:" id="JXS-oO-9cK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ylv-Il-HnQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="XC5-d8-4s2" userLabel="Exit" sceneMemberID="exit"/>
                 <view contentMode="scaleToFill" id="5WY-BL-mpQ">
                     <rect key="frame" x="0.0" y="0.0" width="323" height="720"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -156,7 +167,8 @@
     </scenes>
     <resources>
         <image name="Avatar" width="142" height="146"/>
-        <image name="Header" width="414" height="381"/>
+        <image name="Header" width="414" height="326"/>
+        <image name="HomeButton" width="34" height="34"/>
         <image name="IDCard" width="323" height="720"/>
         <image name="JoinTeam" width="203" height="47"/>
         <image name="StartGame" width="326" height="52"/>

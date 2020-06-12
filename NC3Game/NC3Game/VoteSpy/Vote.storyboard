@@ -19,20 +19,20 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeaderVote" translatesAutoresizingMaskIntoConstraints="NO" id="MWM-gg-qLk">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="381"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's time to vote!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSV-vN-sum">
-                                <rect key="frame" x="112.5" y="354" width="189" height="33.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's time to catch the Spy!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSV-vN-sum">
+                                <rect key="frame" x="56" y="354" width="302" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick on who you vote as a SPY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxD-3u-Uvr">
-                                <rect key="frame" x="90.5" y="397.5" width="233" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discuss and vote on the player who the team suspects is a SPY" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxD-3u-Uvr">
+                                <rect key="frame" x="10" y="398" width="394" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zQh-Zn-nPT">
-                                <rect key="frame" x="0.0" y="428.5" width="414" height="433.5"/>
+                                <rect key="frame" x="0.0" y="449" width="414" height="413"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xQz-Pb-aOX">
                                     <size key="itemSize" width="128" height="128"/>
@@ -73,9 +73,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="dxD-3u-Uvr" firstAttribute="leading" secondItem="TAn-Dp-Gyv" secondAttribute="leading" constant="10" id="AYq-Ea-E5z"/>
                             <constraint firstItem="MWM-gg-qLk" firstAttribute="top" secondItem="TAn-Dp-Gyv" secondAttribute="top" id="CbD-II-gkL"/>
                             <constraint firstItem="dxD-3u-Uvr" firstAttribute="top" secondItem="PSV-vN-sum" secondAttribute="bottom" constant="10" id="DsY-Jc-6Ep"/>
                             <constraint firstItem="PSV-vN-sum" firstAttribute="centerX" secondItem="TAn-Dp-Gyv" secondAttribute="centerX" id="G5U-pH-iXk"/>
+                            <constraint firstItem="dxD-3u-Uvr" firstAttribute="top" secondItem="PSV-vN-sum" secondAttribute="bottom" constant="10" id="aiu-3r-72M"/>
+                            <constraint firstAttribute="trailing" secondItem="dxD-3u-Uvr" secondAttribute="trailing" constant="10" id="bUr-Vz-6Qb"/>
                             <constraint firstItem="dxD-3u-Uvr" firstAttribute="centerX" secondItem="TAn-Dp-Gyv" secondAttribute="centerX" id="bYr-y7-CEK"/>
                             <constraint firstItem="PSV-vN-sum" firstAttribute="top" secondItem="K6X-o7-Z40" secondAttribute="top" constant="310" id="dPr-qH-QTF"/>
                             <constraint firstItem="K6X-o7-Z40" firstAttribute="trailing" secondItem="zQh-Zn-nPT" secondAttribute="trailing" id="nIr-TF-v9y"/>

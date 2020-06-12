@@ -97,10 +97,12 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="R8j-pK-EV8" id="Hzm-QP-lWy"/>
-                        <segue destination="JSf-pp-oxZ" kind="show" identifier="goToHome" id="1YN-eG-Qcj"/>
+                        <segue destination="JSf-pp-oxZ" kind="showDetail" identifier="goToHome" id="1YN-eG-Qcj"/>
+                        <segue destination="4vT-Sr-jw0" kind="unwind" identifier="unwindToHome" unwindAction="unwind:" id="CZj-fA-qJm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6e7-zB-7Fs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="4vT-Sr-jw0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="95.652173913043484" y="8.7053571428571423"/>
         </scene>
@@ -314,10 +316,10 @@
     </scenes>
     <resources>
         <image name="gambarHTP1" width="372" height="331"/>
-        <image name="gambarHTP2" width="397" height="426"/>
+        <image name="gambarHTP2" width="414" height="354"/>
         <image name="gambarHTP3" width="329" height="398"/>
-        <image name="gambarHTP4" width="414" height="541"/>
-        <image name="gambarHTP5" width="366" height="325"/>
+        <image name="gambarHTP4" width="414" height="354"/>
+        <image name="gambarHTP5" width="343" height="305"/>
         <image name="homeButton" width="66" height="52"/>
         <image name="playNowHTP" width="283" height="52"/>
     </resources>

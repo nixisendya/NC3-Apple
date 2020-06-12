@@ -113,7 +113,7 @@ THE SPY</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="playAgain"/>
                                 <connections>
-                                    <segue destination="Bpl-ed-EAF" kind="show" identifier="goToAddPlayer" id="uRZ-mk-Si8"/>
+                                    <action selector="playAgainPressed:" destination="gLU-PX-S5e" eventType="touchUpInside" id="dZ8-Zq-IoS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5R-h0-hcn">
@@ -121,7 +121,7 @@ THE SPY</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="homeButton"/>
                                 <connections>
-                                    <segue destination="jDu-aF-pRY" kind="show" identifier="goToHome" id="pK7-nT-NV8"/>
+                                    <action selector="homeButtonPressed:" destination="gLU-PX-S5e" eventType="touchUpInside" id="BZt-Vl-rjv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Good job detectives," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REk-JM-2tk">
@@ -136,30 +136,15 @@ THE SPY</string>
                         <viewLayoutGuide key="safeArea" id="U6Y-zt-NJJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="8lY-7O-q7Q"/>
+                    <connections>
+                        <segue destination="rZ8-Ib-6Dy" kind="unwind" identifier="unwindToHome" unwindAction="unwind:" id="Vy0-Cy-rIu"/>
+                        <segue destination="rZ8-Ib-6Dy" kind="unwind" identifier="unwindToPlayer" unwindAction="unwindPlayer:" id="pda-kf-42k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HgL-Jd-Ota" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="rZ8-Ib-6Dy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-45" y="-591"/>
-        </scene>
-        <!--AddPlayer-->
-        <scene sceneID="vRO-2x-qa8">
-            <objects>
-                <viewControllerPlaceholder storyboardName="AddPlayer" id="Bpl-ed-EAF" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="eOS-T3-tSt"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wkv-ML-P4D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="947" y="-490"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="hrR-Nv-0qI">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="jDu-aF-pRY" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="CNP-Rf-IYT"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IrJ-yI-nBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1022" y="-266"/>
         </scene>
         <!--Win View Controller-->
         <scene sceneID="rr9-FA-SSE">
@@ -202,14 +187,14 @@ GOT AWAY</string>
                                 </constraints>
                                 <state key="normal" image="playAgain"/>
                                 <connections>
-                                    <segue destination="Bpl-ed-EAF" kind="show" identifier="goToAddPlayer" id="dlg-bk-9kP"/>
+                                    <action selector="playAgainPressed:" destination="6KM-UR-vdQ" eventType="touchUpInside" id="LCq-OY-Byt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jus-Wq-RgK">
                                 <rect key="frame" x="317" y="810" width="66" height="52"/>
                                 <state key="normal" image="homeButton"/>
                                 <connections>
-                                    <segue destination="jDu-aF-pRY" kind="show" identifier="goToHome" id="438-gR-6p2"/>
+                                    <action selector="homeButtonPressed:" destination="6KM-UR-vdQ" eventType="touchUpInside" id="ci1-Rg-1G0"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="7Rw-BI-pM2">
@@ -248,17 +233,16 @@ GOT AWAY</string>
                     <connections>
                         <outlet property="avatarSpyImage" destination="7Rw-BI-pM2" id="zvi-KN-4ve"/>
                         <outlet property="nameSpyImage" destination="mxB-Rd-7vs" id="qHY-T4-4Nq"/>
+                        <segue destination="Cdj-cS-esw" kind="unwind" identifier="unwindToHome" unwindAction="unwind:" id="9de-ZP-uLK"/>
+                        <segue destination="Cdj-cS-esw" kind="unwind" identifier="unwindToPlayer" unwindAction="unwindPlayer:" id="D39-l3-9uE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vww-Sg-jL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Cdj-cS-esw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-45" y="98"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="pK7-nT-NV8"/>
-        <segue reference="uRZ-mk-Si8"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Avatar" width="142" height="146"/>
         <image name="Badge" width="121" height="122"/>

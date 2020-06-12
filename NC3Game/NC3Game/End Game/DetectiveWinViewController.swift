@@ -16,6 +16,13 @@ class DetectiveWinViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func homeButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToHome", sender: self)
+    }
+    @IBAction func playAgainPressed(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToPlayer", sender: self)
+    }
+    
 
     /*
     // MARK: - Navigation

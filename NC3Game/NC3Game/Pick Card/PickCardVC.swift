@@ -128,6 +128,11 @@ class PickCardVC: UIViewController {
     @IBAction func startGame(_ sender: Any) {
         performSegue(withIdentifier: "goToGameplay", sender: self)
     }
+    
+    @IBAction func homeButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToHome", sender: self)
+    }
+    
 }
 
 extension PickCardVC: UICollectionViewDelegate, UICollectionViewDataSource {
