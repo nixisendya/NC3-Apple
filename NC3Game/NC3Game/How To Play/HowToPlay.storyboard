@@ -11,7 +11,7 @@
         <!--How To PlayVC-->
         <scene sceneID="do6-mh-UQY">
             <objects>
-                <viewController id="xPI-yW-k3w" customClass="HowToPlayVC" customModule="NC3Game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onBoarding" id="xPI-yW-k3w" customClass="HowToPlayVC" customModule="NC3Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wh7-rY-F3a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

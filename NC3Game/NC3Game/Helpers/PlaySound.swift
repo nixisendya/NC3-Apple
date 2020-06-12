@@ -20,3 +20,15 @@ func playSound(sound: String, type: String) {
         }
     }
 }
+
+func playSoundLoop(sound: String, type: String, loop: Int) {
+    if let path = Bundle.main.path(forResource: sound, ofType: type) {
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+            audioPlayer?.numberOfLoops = loop
+            audioPlayer?.play()
+        } catch {
+            print("ERROR: Could not find and play the sound file!")
+        }
+    }
+}
