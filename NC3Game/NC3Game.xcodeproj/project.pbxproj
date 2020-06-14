@@ -39,6 +39,10 @@
 		3EC4E39F2492345200CD92E8 /* DetectiveWinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4E39E2492345200CD92E8 /* DetectiveWinViewController.swift */; };
 		C11182FB248FFB38004605C9 /* GudanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11182FA248FFB38004605C9 /* GudanceVC.swift */; };
 		C11183022493D228004605C9 /* EggTimer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C11183012493D228004605C9 /* EggTimer.mp3 */; };
+		C14D646724965D88002801DB /* SniperRifle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C14D646624965D88002801DB /* SniperRifle.mp3 */; };
+		C14D646924965EA7002801DB /* evilLaugh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C14D646824965EA7002801DB /* evilLaugh.mp3 */; };
+		C14D646B24965F38002801DB /* Applause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C14D646A24965F38002801DB /* Applause.mp3 */; };
+		C14D646D249661CD002801DB /* Countdown.wav in Resources */ = {isa = PBXBuildFile; fileRef = C14D646C249661CD002801DB /* Countdown.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +80,10 @@
 		3EC4E39E2492345200CD92E8 /* DetectiveWinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectiveWinViewController.swift; sourceTree = "<group>"; };
 		C11182FA248FFB38004605C9 /* GudanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GudanceVC.swift; sourceTree = "<group>"; };
 		C11183012493D228004605C9 /* EggTimer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EggTimer.mp3; sourceTree = "<group>"; };
+		C14D646624965D88002801DB /* SniperRifle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SniperRifle.mp3; sourceTree = "<group>"; };
+		C14D646824965EA7002801DB /* evilLaugh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = evilLaugh.mp3; sourceTree = "<group>"; };
+		C14D646A24965F38002801DB /* Applause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Applause.mp3; sourceTree = "<group>"; };
+		C14D646C249661CD002801DB /* Countdown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Countdown.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +108,12 @@
 		3E4EE14F2492684300BA9AC3 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				C14D646624965D88002801DB /* SniperRifle.mp3 */,
 				C11183012493D228004605C9 /* EggTimer.mp3 */,
 				3E4EE1522492733600BA9AC3 /* WalkieTalkie2.mp3 */,
+				C14D646824965EA7002801DB /* evilLaugh.mp3 */,
+				C14D646A24965F38002801DB /* Applause.mp3 */,
+				C14D646C249661CD002801DB /* Countdown.wav */,
 				3E4EE1502492685400BA9AC3 /* WalkieTalkie.wav */,
 			);
 			path = Sounds;
@@ -283,16 +295,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C14D646724965D88002801DB /* SniperRifle.mp3 in Resources */,
 				3E4EE1532492733600BA9AC3 /* WalkieTalkie2.mp3 in Resources */,
 				3E6CB1FC248F5E7300BF8816 /* Vote.storyboard in Resources */,
 				3E6CB1F8248F5E2800BF8816 /* Gameplay.storyboard in Resources */,
 				3E6CB20B248F5F6500BF8816 /* EndGame.storyboard in Resources */,
 				3E6CB1F4248F5DFD00BF8816 /* PickCard.storyboard in Resources */,
+				C14D646924965EA7002801DB /* evilLaugh.mp3 in Resources */,
 				3E6CB1E0248F5CE200BF8816 /* LaunchScreen.storyboard in Resources */,
+				C14D646D249661CD002801DB /* Countdown.wav in Resources */,
 				3E6CB1EE248F5D6C00BF8816 /* AddPlayer.storyboard in Resources */,
 				3E6CB207248F5F3B00BF8816 /* HowToPlay.storyboard in Resources */,
 				C11183022493D228004605C9 /* EggTimer.mp3 in Resources */,
 				3E6CB203248F5F0700BF8816 /* VoteLocation.storyboard in Resources */,
+				C14D646B24965F38002801DB /* Applause.mp3 in Resources */,
 				3E4EE1512492685400BA9AC3 /* WalkieTalkie.wav in Resources */,
 				3E6CB1DD248F5CE200BF8816 /* Assets.xcassets in Resources */,
 				3E6CB1DB248F5CE100BF8816 /* Main.storyboard in Resources */,

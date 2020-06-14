@@ -13,7 +13,7 @@ class DetectiveWinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playSound(sound: "yay", type: "mp3")
+        playSound(sound: "Applause", type: "mp3")
 
         // Do any additional setup after loading the view.
     }

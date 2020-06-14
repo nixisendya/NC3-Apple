@@ -65,7 +65,7 @@ class EndGameVC: UIViewController {
         animateGlass()
 
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            playSound(sound: "judul", type: "mp3")
+            playSound(sound: "Countdown", type: "mp3")
             self.seconds -= 1
             if self.seconds == 0 {
                 print("Go!")
@@ -74,6 +74,7 @@ class EndGameVC: UIViewController {
             } else {
                 self.timerLabel.text = "\(self.seconds)"
             }
+            stopSound()
         }
         
     }

@@ -149,7 +149,7 @@ class GameplayVC: UIViewController {
         viewAlert.center = self.view.center
         view.addSubview(viewAlert)
         
-        playSound(sound: "GunShotGun25", type: "mp3")
+        playSound(sound: "SniperRifle", type: "mp3")
     }
     
 
