@@ -38,6 +38,7 @@
 		3EC4E39D2492313200CD92E8 /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4E39C2492313200CD92E8 /* WinViewController.swift */; };
 		3EC4E39F2492345200CD92E8 /* DetectiveWinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4E39E2492345200CD92E8 /* DetectiveWinViewController.swift */; };
 		C11182FB248FFB38004605C9 /* GudanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11182FA248FFB38004605C9 /* GudanceVC.swift */; };
+		C11183022493D228004605C9 /* EggTimer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C11183012493D228004605C9 /* EggTimer.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		3EC4E39C2492313200CD92E8 /* WinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
 		3EC4E39E2492345200CD92E8 /* DetectiveWinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectiveWinViewController.swift; sourceTree = "<group>"; };
 		C11182FA248FFB38004605C9 /* GudanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GudanceVC.swift; sourceTree = "<group>"; };
+		C11183012493D228004605C9 /* EggTimer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EggTimer.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		3E4EE14F2492684300BA9AC3 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				C11183012493D228004605C9 /* EggTimer.mp3 */,
 				3E4EE1522492733600BA9AC3 /* WalkieTalkie2.mp3 */,
 				3E4EE1502492685400BA9AC3 /* WalkieTalkie.wav */,
 			);
@@ -288,6 +291,7 @@
 				3E6CB1E0248F5CE200BF8816 /* LaunchScreen.storyboard in Resources */,
 				3E6CB1EE248F5D6C00BF8816 /* AddPlayer.storyboard in Resources */,
 				3E6CB207248F5F3B00BF8816 /* HowToPlay.storyboard in Resources */,
+				C11183022493D228004605C9 /* EggTimer.mp3 in Resources */,
 				3E6CB203248F5F0700BF8816 /* VoteLocation.storyboard in Resources */,
 				3E4EE1512492685400BA9AC3 /* WalkieTalkie.wav in Resources */,
 				3E6CB1DD248F5CE200BF8816 /* Assets.xcassets in Resources */,

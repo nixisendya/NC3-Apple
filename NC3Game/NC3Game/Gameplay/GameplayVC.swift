@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameplayVC: UIViewController {
 
@@ -24,6 +25,8 @@ class GameplayVC: UIViewController {
     var firstPlayer: String!
     var arrayOfPlayers: [Player]!
     var indexSpy: Int!
+    var audioPlayer: AVAudioPlayer?
+    
     
     var randomLocation: String!
     
@@ -43,7 +46,7 @@ class GameplayVC: UIViewController {
     // Array pointer
     var i = 0
     
-    var count = 600
+    var count = 60
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +64,8 @@ class GameplayVC: UIViewController {
         labelStartPlayer.text = "\(firstPlayer!), start off by asking a question!"
         
         viewGradient.layer.mask = gradientMaskLayer
+        
+        playSoundLoop(sound: "EggTimer", type: "mp3", loop: 10)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -114,7 +119,11 @@ class GameplayVC: UIViewController {
         if(count >= 0){
             let minutes = String(count / 60)
             let seconds = String(count % 60)
-            timerLabel.text = minutes + ":" + seconds
+            if count % 60 < 10 {
+                timerLabel.text = minutes + ":0" + seconds
+            }else {
+               timerLabel.text = minutes + ":" + seconds
+            }
             count -= 1
         } else {
             showViewTimerUp()
@@ -136,6 +145,8 @@ class GameplayVC: UIViewController {
             
         viewAlert.center = self.view.center
         view.addSubview(viewAlert)
+        
+        playSound(sound: "GunShotGun25", type: "mp3")
     }
     
 

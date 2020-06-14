@@ -36,6 +36,7 @@ class HowToPlayVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     @IBAction func homeButtonPressed(_ sender: Any) {
+        Core.share.setIsNotNewUser()
         performSegue(withIdentifier: "unwindToHome", sender: self)
     }
     
