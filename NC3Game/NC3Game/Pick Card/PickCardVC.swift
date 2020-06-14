@@ -113,7 +113,7 @@ class PickCardVC: UIViewController {
         
         overlayView.removeFromSuperview()
         shake()
-        playSound(sound: "WalkieTalkie2", type: "wav")
+        playSound(sound: "WalkieTalkie2", type: "mp3")
         
         if arrayOfPlayersName.isEmpty {
             overlayView.backgroundColor = .black

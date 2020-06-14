@@ -66,6 +66,7 @@ class EndGameVC: UIViewController {
 
       
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            playSound(sound: "Countdown", type: "mp3")
             self.seconds -= 1
             if self.seconds == 0 {
                 print("Go!")
@@ -73,7 +74,6 @@ class EndGameVC: UIViewController {
                 timer.invalidate()
             } else {
                 self.timerLabel.text = "\(self.seconds)"
-                playSound(sound: "Countdown", type: "wav")
             }
             stopSound()
         }

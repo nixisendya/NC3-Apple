@@ -41,8 +41,8 @@
 		C14D646724965D88002801DB /* SniperRifle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C14D646624965D88002801DB /* SniperRifle.mp3 */; };
 		C14D646924965EA7002801DB /* evilLaugh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C14D646824965EA7002801DB /* evilLaugh.mp3 */; };
 		C14D646B24965F38002801DB /* Applause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C14D646A24965F38002801DB /* Applause.mp3 */; };
-		C14D646F24966A63002801DB /* Countdown.wav in Resources */ = {isa = PBXBuildFile; fileRef = C14D646E24966A63002801DB /* Countdown.wav */; };
-		C14D647124966FA5002801DB /* WalkieTalkie2.wav in Resources */ = {isa = PBXBuildFile; fileRef = C14D647024966FA5002801DB /* WalkieTalkie2.wav */; };
+		C14D647324967951002801DB /* Countdown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C14D647224967951002801DB /* Countdown.mp3 */; };
+		C14D6475249679E4002801DB /* WalkieTalkie2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C14D6474249679E4002801DB /* WalkieTalkie2.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,8 +82,8 @@
 		C14D646624965D88002801DB /* SniperRifle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SniperRifle.mp3; sourceTree = "<group>"; };
 		C14D646824965EA7002801DB /* evilLaugh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = evilLaugh.mp3; sourceTree = "<group>"; };
 		C14D646A24965F38002801DB /* Applause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Applause.mp3; sourceTree = "<group>"; };
-		C14D646E24966A63002801DB /* Countdown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Countdown.wav; path = ../../../../../Downloads/Countdown.wav; sourceTree = "<group>"; };
-		C14D647024966FA5002801DB /* WalkieTalkie2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WalkieTalkie2.wav; sourceTree = "<group>"; };
+		C14D647224967951002801DB /* Countdown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Countdown.mp3; sourceTree = "<group>"; };
+		C14D6474249679E4002801DB /* WalkieTalkie2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = WalkieTalkie2.mp3; path = "../../../../../Downloads/files (online-audio-converter/WalkieTalkie2.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,12 +108,12 @@
 		3E4EE14F2492684300BA9AC3 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				C14D6474249679E4002801DB /* WalkieTalkie2.mp3 */,
 				C14D646624965D88002801DB /* SniperRifle.mp3 */,
 				C11183012493D228004605C9 /* EggTimer.mp3 */,
-				C14D647024966FA5002801DB /* WalkieTalkie2.wav */,
+				C14D647224967951002801DB /* Countdown.mp3 */,
 				C14D646824965EA7002801DB /* evilLaugh.mp3 */,
 				C14D646A24965F38002801DB /* Applause.mp3 */,
-				C14D646E24966A63002801DB /* Countdown.wav */,
 				3E4EE1502492685400BA9AC3 /* WalkieTalkie.wav */,
 			);
 			path = Sounds;
@@ -295,18 +295,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C14D647324967951002801DB /* Countdown.mp3 in Resources */,
 				C14D646724965D88002801DB /* SniperRifle.mp3 in Resources */,
 				3E6CB1FC248F5E7300BF8816 /* Vote.storyboard in Resources */,
 				3E6CB1F8248F5E2800BF8816 /* Gameplay.storyboard in Resources */,
 				3E6CB20B248F5F6500BF8816 /* EndGame.storyboard in Resources */,
-				C14D647124966FA5002801DB /* WalkieTalkie2.wav in Resources */,
 				3E6CB1F4248F5DFD00BF8816 /* PickCard.storyboard in Resources */,
 				C14D646924965EA7002801DB /* evilLaugh.mp3 in Resources */,
 				3E6CB1E0248F5CE200BF8816 /* LaunchScreen.storyboard in Resources */,
-				C14D646F24966A63002801DB /* Countdown.wav in Resources */,
 				3E6CB1EE248F5D6C00BF8816 /* AddPlayer.storyboard in Resources */,
 				3E6CB207248F5F3B00BF8816 /* HowToPlay.storyboard in Resources */,
 				C11183022493D228004605C9 /* EggTimer.mp3 in Resources */,
+				C14D6475249679E4002801DB /* WalkieTalkie2.mp3 in Resources */,
 				3E6CB203248F5F0700BF8816 /* VoteLocation.storyboard in Resources */,
 				C14D646B24965F38002801DB /* Applause.mp3 in Resources */,
 				3E4EE1512492685400BA9AC3 /* WalkieTalkie.wav in Resources */,
