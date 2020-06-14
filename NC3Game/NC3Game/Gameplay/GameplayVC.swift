@@ -74,6 +74,7 @@ class GameplayVC: UIViewController {
                 destinationVC.arrayOfPlayers = arrayOfPlayers
                 destinationVC.indexSpy = indexSpy
             }
+            stopSound()
         }
 
         if segue.identifier == "goToLocation" {
@@ -82,12 +83,14 @@ class GameplayVC: UIViewController {
                 destinationVC.indexSpy = indexSpy
                 destinationVC.randomLocation = randomLocation
             }
+            stopSound()
         }
     }
     
     
     @IBAction func homeButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "unwindToHome", sender: self)
+        stopSound()
     }
     
     @IBAction func buttonNextSuggestionPressed(_ sender: Any) {
