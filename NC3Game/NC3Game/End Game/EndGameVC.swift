@@ -70,18 +70,18 @@ class EndGameVC: UIViewController {
         animateGlass()
         animateFootSteps()
 
+        playSound(sound: "Drumroll", type: "mp3")
       
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            playSound(sound: "EggTimer", type: "mp3")
             self.seconds -= 1
             if self.seconds == 0 {
                 print("Go!")
                 self.determineWinLose()
+                stopSound()
                 timer.invalidate()
             } else {
                 self.timerLabel.text = "\(self.seconds)"
             }
-            stopSound()
         }
         
     }
