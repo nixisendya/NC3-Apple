@@ -53,7 +53,7 @@ class GameplayVC: UIViewController {
     // Array pointer
     var i = 0
     
-    var count = 60
+    var count = 600
     
     override func viewDidLoad() {
         super.viewDidLoad()
