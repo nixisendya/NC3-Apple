@@ -115,14 +115,21 @@ extension AddPlayerVC: UICollectionViewDelegate, UICollectionViewDataSource {
     @objc func addButtonTapped() {
         print("Show UI to add new player")
         nameTextField.text = ""
-    
-        overlayView.backgroundColor = .black
-        overlayView.alpha = 0.8
-        view.addSubview(overlayView)
+        self.overlayView.backgroundColor = .black
+        self.overlayView.alpha = 0.8
+        self.view.addSubview(self.overlayView)
         
-        viewIDCard.center.x = self.view.center.x
-        viewIDCard.frame.origin.y = 0
-        view.addSubview(viewIDCard)
+        transistionIDin()
+    }
+    
+    func transistionIDin(){
+        self.viewIDCard.center.y -= 750
+        self.viewIDCard.center.x = 207
+        UIView.animate(withDuration: 0.5) {
+            self.viewIDCard.center.x = self.view.center.x
+            self.viewIDCard.frame.origin.y = 0
+            self.view.addSubview(self.viewIDCard)
+        }
     }
     
     func transitionIDout() {
@@ -135,7 +142,6 @@ extension AddPlayerVC: UICollectionViewDelegate, UICollectionViewDataSource {
               // self.container is your view that you want to animate
               self.viewIDCard.transform = top
         }, completion: nil)
-        
         
         let secondsToDelay = 0.5
         perform(#selector(delayedFunction), with: nil, afterDelay: secondsToDelay)

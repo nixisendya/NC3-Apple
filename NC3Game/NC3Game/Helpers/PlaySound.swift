@@ -32,3 +32,7 @@ func playSoundLoop(sound: String, type: String, loop: Int) {
         }
     }
 }
+
+func stopSound(){
+    audioPlayer?.stop()
+}

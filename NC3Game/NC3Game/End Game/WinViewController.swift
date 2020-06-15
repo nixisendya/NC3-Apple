@@ -17,7 +17,7 @@ class WinViewController: UIViewController {
     var realSpy: Player!
     override func viewDidLoad() {
         super.viewDidLoad()
-        playSound(sound: "yahh", type: "mp3")
+        playSound(sound: "evilLaugh", type: "mp3")
         avatarSpyImage.image = realSpy.avatar
         nameSpyImage.text = "\(realSpy.name) was the spy!"
         // Do any additional setup after loading the view.
@@ -25,10 +25,12 @@ class WinViewController: UIViewController {
     
     @IBAction func homeButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "unwindToHome", sender: self)
+        stopSound()
     }
     
     @IBAction func playAgainPressed(_ sender: Any) {
         performSegue(withIdentifier: "unwindToPlayer", sender: self)
+        stopSound()
     }
 
 }
