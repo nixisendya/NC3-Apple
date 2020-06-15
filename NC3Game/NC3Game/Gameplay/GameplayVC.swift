@@ -22,6 +22,12 @@ class GameplayVC: UIViewController {
     
     @IBOutlet weak var viewGradient: UIView!
     
+    @IBOutlet weak var bubbleImage1: UIImageView!
+    @IBOutlet weak var bubbleImage2: UIImageView!
+    @IBOutlet weak var bubbleImage3: UIImageView!
+    @IBOutlet weak var bubbleImage4: UIImageView!
+    
+    
     var firstPlayer: String!
     var arrayOfPlayers: [Player]!
     var indexSpy: Int!
@@ -67,6 +73,8 @@ class GameplayVC: UIViewController {
         viewGradient.layer.mask = gradientMaskLayer
         
         playSoundLoop(sound: "EggTimer", type: "mp3", loop: 10)
+        
+        animateSpeechBubble()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -153,6 +161,58 @@ class GameplayVC: UIViewController {
         view.addSubview(viewAlert)
         
         playSound(sound: "AlarmSiren", type: "mp3")
+    }
+    
+    func animateSpeechBubble() {
+        bubbleImage1.alpha = 0
+        bubbleImage2.alpha = 0
+        bubbleImage3.alpha = 0
+        bubbleImage4.alpha = 0
+        
+        
+        UIView.animate(
+            withDuration: 2,
+            delay: 1,
+            options: [.autoreverse, .repeat, .allowUserInteraction],
+            animations: {
+                self.bubbleImage1.alpha = 1.0
+                self.bubbleImage1.transform = CGAffineTransform(translationX: 0, y: -20)
+            },
+            completion: nil
+        )
+        
+        UIView.animate(
+            withDuration: 2,
+            delay: 2,
+            options: [.autoreverse, .repeat, .allowUserInteraction],
+            animations: {
+                self.bubbleImage2.alpha = 1.0
+                self.bubbleImage2.transform = CGAffineTransform(translationX: 0, y: -20)
+            },
+            completion: nil
+        )
+        
+        UIView.animate(
+            withDuration: 2,
+            delay: 3,
+            options: [.autoreverse, .repeat, .allowUserInteraction],
+            animations: {
+                self.bubbleImage3.alpha = 1.0
+                self.bubbleImage3.transform = CGAffineTransform(translationX: 0, y: -20)
+            },
+            completion: nil
+        )
+        
+        UIView.animate(
+            withDuration: 2,
+            delay: 4,
+            options: [.autoreverse, .repeat, .allowUserInteraction],
+            animations: {
+                self.bubbleImage4.alpha = 1.0
+                self.bubbleImage4.transform = CGAffineTransform(translationX: 0, y: -20)
+            },
+            completion: nil
+        )
     }
 
 }

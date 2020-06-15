@@ -36,6 +36,22 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Friends" translatesAutoresizingMaskIntoConstraints="NO" id="sMT-JX-PGJ">
                                 <rect key="frame" x="10" y="454" width="394" height="259"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SpeechBubble1" translatesAutoresizingMaskIntoConstraints="NO" id="Piu-b6-beL">
+                                <rect key="frame" x="276" y="430" width="38" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SpeechBubble2" translatesAutoresizingMaskIntoConstraints="NO" id="7CX-pQ-xDk">
+                                <rect key="frame" x="92" y="430" width="38" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SpeechBubble1" translatesAutoresizingMaskIntoConstraints="NO" id="TX6-gr-CSc" userLabel="SpeechBubble3">
+                                <rect key="frame" x="324" y="505" width="38" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SpeechBubble2" translatesAutoresizingMaskIntoConstraints="NO" id="E3M-YG-bL4" userLabel="SpeechBubble4">
+                                <rect key="frame" x="44" y="488" width="38" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dE9-75-UIL">
                                 <rect key="frame" x="0.0" y="89" width="414" height="550"/>
                                 <subviews>
@@ -56,7 +72,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysq-sV-ssQ">
-                                <rect key="frame" x="0.0" y="179" width="414" height="42"/>
+                                <rect key="frame" x="0.0" y="179" width="414" height="43"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -92,21 +108,21 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describe this location in one word" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JC9-C6-B2v">
-                                <rect key="frame" x="57.5" y="357" width="298.5" height="20"/>
+                                <rect key="frame" x="57.5" y="358" width="298.5" height="20.5"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player, start it off and ask a question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqK-yp-9M9">
-                                <rect key="frame" x="0.0" y="261" width="414" height="21"/>
+                                <rect key="frame" x="0.0" y="262" width="414" height="21"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hat-Z4-E5J">
-                                <rect key="frame" x="0.0" y="322" width="414" height="20"/>
+                                <rect key="frame" x="0.0" y="323" width="414" height="20"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -151,6 +167,10 @@
                     </view>
                     <connections>
                         <outlet property="alertImage" destination="7fg-FJ-q6e" id="jGS-8f-NPl"/>
+                        <outlet property="bubbleImage1" destination="Piu-b6-beL" id="P0C-vv-6EJ"/>
+                        <outlet property="bubbleImage2" destination="7CX-pQ-xDk" id="NiV-if-FCg"/>
+                        <outlet property="bubbleImage3" destination="TX6-gr-CSc" id="HKK-Am-IxU"/>
+                        <outlet property="bubbleImage4" destination="E3M-YG-bL4" id="yxS-IB-uzU"/>
                         <outlet property="labelQuestion" destination="JC9-C6-B2v" id="AQG-mJ-Ka8"/>
                         <outlet property="labelStartPlayer" destination="VqK-yp-9M9" id="Viz-ha-UnU"/>
                         <outlet property="overlayView" destination="vm5-YS-1ay" id="xyn-zS-0Sw"/>
@@ -252,6 +272,8 @@ It’s time to vote!</string>
         <image name="Friends" width="322" height="259"/>
         <image name="GuessLocationButton" width="326" height="52"/>
         <image name="HomeButton" width="34" height="34"/>
+        <image name="SpeechBubble1" width="38" height="36"/>
+        <image name="SpeechBubble2" width="38" height="36"/>
         <image name="VoteButton" width="326" height="52"/>
         <image name="VoteSmall" width="168" height="52"/>
         <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
