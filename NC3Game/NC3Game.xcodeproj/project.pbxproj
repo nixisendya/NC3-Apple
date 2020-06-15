@@ -35,6 +35,10 @@
 		3E6CB212248FC44B00BF8816 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB211248FC44B00BF8816 /* CardCollectionViewCell.swift */; };
 		3E7AB4A9248FCB4400486651 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7AB4A8248FCB4400486651 /* Card.swift */; };
 		3EA4A3392497102C00ECB2D4 /* WalkieTalkie2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3EA4A3382497102C00ECB2D4 /* WalkieTalkie2.mp3 */; };
+		3EA4A33B24971B0900ECB2D4 /* AlarmSiren.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3EA4A33A24971B0900ECB2D4 /* AlarmSiren.mp3 */; };
+		3EA4A34024971DD900ECB2D4 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EA4A33D24971DD900ECB2D4 /* Rubik-Bold.ttf */; };
+		3EA4A34124971DD900ECB2D4 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EA4A33E24971DD900ECB2D4 /* Rubik-Medium.ttf */; };
+		3EA4A34224971DD900ECB2D4 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EA4A33F24971DD900ECB2D4 /* Rubik-Regular.ttf */; };
 		3EC4E39D2492313200CD92E8 /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4E39C2492313200CD92E8 /* WinViewController.swift */; };
 		3EC4E39F2492345200CD92E8 /* DetectiveWinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4E39E2492345200CD92E8 /* DetectiveWinViewController.swift */; };
 		C11182FB248FFB38004605C9 /* GudanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11182FA248FFB38004605C9 /* GudanceVC.swift */; };
@@ -76,6 +80,10 @@
 		3E6CB211248FC44B00BF8816 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		3E7AB4A8248FCB4400486651 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		3EA4A3382497102C00ECB2D4 /* WalkieTalkie2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = WalkieTalkie2.mp3; path = ../../../../../Downloads/SFX/WalkieTalkie2.mp3; sourceTree = "<group>"; };
+		3EA4A33A24971B0900ECB2D4 /* AlarmSiren.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AlarmSiren.mp3; sourceTree = "<group>"; };
+		3EA4A33D24971DD900ECB2D4 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		3EA4A33E24971DD900ECB2D4 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		3EA4A33F24971DD900ECB2D4 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		3EC4E39C2492313200CD92E8 /* WinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
 		3EC4E39E2492345200CD92E8 /* DetectiveWinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectiveWinViewController.swift; sourceTree = "<group>"; };
 		C11182FA248FFB38004605C9 /* GudanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GudanceVC.swift; sourceTree = "<group>"; };
@@ -108,6 +116,7 @@
 		3E4EE14F2492684300BA9AC3 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				3EA4A33A24971B0900ECB2D4 /* AlarmSiren.mp3 */,
 				3EA4A3382497102C00ECB2D4 /* WalkieTalkie2.mp3 */,
 				C14D646624965D88002801DB /* SniperRifle.mp3 */,
 				C11183012493D228004605C9 /* EggTimer.mp3 */,
@@ -138,6 +147,7 @@
 		3E6CB1D2248F5CE100BF8816 /* NC3Game */ = {
 			isa = PBXGroup;
 			children = (
+				3EA4A33C24971D9A00ECB2D4 /* Fonts */,
 				3E4EE14F2492684300BA9AC3 /* Sounds */,
 				3E4EE14C24925E2100BA9AC3 /* Helpers */,
 				3E6CB20E248F831100BF8816 /* Models */,
@@ -237,6 +247,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		3EA4A33C24971D9A00ECB2D4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3EA4A33D24971DD900ECB2D4 /* Rubik-Bold.ttf */,
+				3EA4A33E24971DD900ECB2D4 /* Rubik-Medium.ttf */,
+				3EA4A33F24971DD900ECB2D4 /* Rubik-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -295,10 +315,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EA4A34024971DD900ECB2D4 /* Rubik-Bold.ttf in Resources */,
+				3EA4A34224971DD900ECB2D4 /* Rubik-Regular.ttf in Resources */,
 				C14D647324967951002801DB /* Countdown.mp3 in Resources */,
 				C14D646724965D88002801DB /* SniperRifle.mp3 in Resources */,
 				3E6CB1FC248F5E7300BF8816 /* Vote.storyboard in Resources */,
 				3E6CB1F8248F5E2800BF8816 /* Gameplay.storyboard in Resources */,
+				3EA4A33B24971B0900ECB2D4 /* AlarmSiren.mp3 in Resources */,
 				3E6CB20B248F5F6500BF8816 /* EndGame.storyboard in Resources */,
 				3E6CB1F4248F5DFD00BF8816 /* PickCard.storyboard in Resources */,
 				C14D646924965EA7002801DB /* evilLaugh.mp3 in Resources */,
@@ -312,6 +335,7 @@
 				3E4EE1512492685400BA9AC3 /* WalkieTalkie.wav in Resources */,
 				3E6CB1DD248F5CE200BF8816 /* Assets.xcassets in Resources */,
 				3E6CB1DB248F5CE100BF8816 /* Main.storyboard in Resources */,
+				3EA4A34124971DD900ECB2D4 /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

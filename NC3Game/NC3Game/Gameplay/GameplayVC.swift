@@ -27,6 +27,7 @@ class GameplayVC: UIViewController {
     var indexSpy: Int!
     var audioPlayer: AVAudioPlayer?
     
+    var timer: Timer?
     
     var randomLocation: String!
     
@@ -53,7 +54,7 @@ class GameplayVC: UIViewController {
 
         // Do any additional setup after loading the view.
         // Timer
-        var timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
         
         let gradientMaskLayer = CAGradientLayer()
         gradientMaskLayer.frame = viewGradient.bounds
@@ -75,6 +76,7 @@ class GameplayVC: UIViewController {
                 destinationVC.indexSpy = indexSpy
             }
             stopSound()
+            timer!.invalidate()
         }
 
         if segue.identifier == "goToLocation" {
@@ -129,6 +131,7 @@ class GameplayVC: UIViewController {
             }
             count -= 1
         } else {
+            timer?.invalidate()
             showViewTimerUp()
         }
 
@@ -149,18 +152,7 @@ class GameplayVC: UIViewController {
         viewAlert.center = self.view.center
         view.addSubview(viewAlert)
         
-        playSound(sound: "SniperRifle", type: "mp3")
+        playSound(sound: "AlarmSiren", type: "mp3")
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

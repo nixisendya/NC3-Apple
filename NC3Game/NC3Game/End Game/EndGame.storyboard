@@ -6,6 +6,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Bold.ttf">
+            <string>Rubik-Bold</string>
+        </array>
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--End GameVC-->
         <scene sceneID="s5s-uL-LCQ">
@@ -16,14 +24,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The group voted for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5H-Gb-ZBy">
-                                <rect key="frame" x="131" y="174" width="152" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="102.5" y="174" width="209" height="26.5"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIH-xe-y8h">
-                                <rect key="frame" x="151" y="205" width="112" height="53"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <rect key="frame" x="145.5" y="210.5" width="123" height="51"/>
+                                <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="43"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -35,16 +43,16 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Analyzing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgM-wO-PYT">
                                 <rect key="frame" x="0.0" y="671" width="415" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gb7-Zg-zVl">
-                                <rect key="frame" x="169" y="708.5" width="74" height="120"/>
+                                <rect key="frame" x="169" y="705.5" width="84" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="An8-yT-jde"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="124"/>
+                                <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="124"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -91,12 +99,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBa-Fe-c6K">
-                                <rect key="frame" x="42" y="111" width="352" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBa-Fe-c6K">
+                                <rect key="frame" x="50.5" y="111" width="313" height="114"/>
                                 <string key="text">YOU CAUGHT
 THE SPY</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -124,15 +131,21 @@ THE SPY</string>
                                     <action selector="homeButtonPressed:" destination="gLU-PX-S5e" eventType="touchUpInside" id="BZt-Vl-rjv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Good job detectives," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REk-JM-2tk">
-                                <rect key="frame" x="100" y="74" width="214" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good job detectives," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REk-JM-2tk">
+                                <rect key="frame" x="0.0" y="74" width="414" height="29"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="24"/>
+                                <color key="textColor" red="0.34509803921568627" green="0.62352941176470589" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="U6Y-zt-NJJ" firstAttribute="trailing" secondItem="REk-JM-2tk" secondAttribute="trailing" id="6si-rT-m9m"/>
+                            <constraint firstItem="pBa-Fe-c6K" firstAttribute="top" secondItem="REk-JM-2tk" secondAttribute="bottom" constant="8" id="9AB-0S-GLF"/>
+                            <constraint firstItem="REk-JM-2tk" firstAttribute="leading" secondItem="U6Y-zt-NJJ" secondAttribute="leading" id="bUc-5l-dNq"/>
+                            <constraint firstItem="pBa-Fe-c6K" firstAttribute="centerX" secondItem="6si-um-z5l" secondAttribute="centerX" id="nbw-hA-tKl"/>
+                            <constraint firstItem="REk-JM-2tk" firstAttribute="top" secondItem="U6Y-zt-NJJ" secondAttribute="top" constant="30" id="pWh-5C-X1F"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="U6Y-zt-NJJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="8lY-7O-q7Q"/>
@@ -155,28 +168,25 @@ THE SPY</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uh-Oh!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJs-mA-hdL">
-                                <rect key="frame" x="0.0" y="80" width="414" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="0.0" y="80" width="414" height="28.5"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="24"/>
+                                <color key="textColor" red="0.7803921568627451" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qF-aI-Dto">
-                                <rect key="frame" x="91" y="117" width="232" height="118"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="118" id="n8j-6q-84Y"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="116.5" width="374" height="114"/>
                                 <string key="text">THE SPY
 GOT AWAY</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DetectiveWin" translatesAutoresizingMaskIntoConstraints="NO" id="0G3-Mh-sM8">
-                                <rect key="frame" x="0.0" y="393" width="414" height="405"/>
+                                <rect key="frame" x="0.0" y="396" width="414" height="405"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIDI THE SPY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxB-Rd-7vs">
-                                <rect key="frame" x="0.0" y="364" width="414" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="364" width="414" height="24"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -200,31 +210,30 @@ GOT AWAY</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="7Rw-BI-pM2">
                                 <rect key="frame" x="138" y="243" width="139" height="116"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="116" id="rI4-UR-SLK"/>
+                                    <constraint firstAttribute="height" constant="116" id="hjI-iu-UTO"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="mxB-Rd-7vs" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" id="3JA-HM-q5j"/>
-                            <constraint firstItem="mxB-Rd-7vs" firstAttribute="centerX" secondItem="7Rw-BI-pM2" secondAttribute="centerX" id="7ch-V1-2Pt"/>
-                            <constraint firstItem="mxB-Rd-7vs" firstAttribute="top" secondItem="7Rw-BI-pM2" secondAttribute="bottom" constant="5" id="98c-Z1-UfF"/>
+                            <constraint firstItem="mxB-Rd-7vs" firstAttribute="trailing" secondItem="YJs-mA-hdL" secondAttribute="trailing" id="04C-nr-IsA"/>
+                            <constraint firstItem="7Rw-BI-pM2" firstAttribute="top" secondItem="1qF-aI-Dto" secondAttribute="bottom" constant="12.5" id="5dD-cx-pG0"/>
                             <constraint firstItem="YJs-mA-hdL" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" id="9Ur-PX-S0s"/>
                             <constraint firstItem="MwX-vR-64P" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" constant="32" id="ByQ-g6-hj0"/>
-                            <constraint firstItem="1qF-aI-Dto" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" constant="91" id="Fvq-hv-FQi"/>
+                            <constraint firstItem="mxB-Rd-7vs" firstAttribute="leading" secondItem="YJs-mA-hdL" secondAttribute="leading" id="Czb-tn-nLC"/>
+                            <constraint firstItem="Axq-Mm-Kgv" firstAttribute="trailing" secondItem="1qF-aI-Dto" secondAttribute="trailing" constant="20" id="EkU-s1-MtA"/>
+                            <constraint firstItem="mxB-Rd-7vs" firstAttribute="leading" secondItem="0G3-Mh-sM8" secondAttribute="leading" id="Ff2-b5-FAg"/>
                             <constraint firstItem="MwX-vR-64P" firstAttribute="bottom" secondItem="Axq-Mm-Kgv" secondAttribute="bottom" id="I3d-FU-e2p"/>
-                            <constraint firstItem="0G3-Mh-sM8" firstAttribute="leading" secondItem="mxB-Rd-7vs" secondAttribute="leading" id="I3m-rb-Dxn"/>
-                            <constraint firstItem="7Rw-BI-pM2" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" constant="138" id="My4-YJ-fZR"/>
-                            <constraint firstItem="1qF-aI-Dto" firstAttribute="centerX" secondItem="YJs-mA-hdL" secondAttribute="centerX" id="NbB-8X-PAg"/>
-                            <constraint firstItem="7Rw-BI-pM2" firstAttribute="top" secondItem="1qF-aI-Dto" secondAttribute="bottom" constant="8" id="Vse-dF-kJR"/>
-                            <constraint firstItem="1qF-aI-Dto" firstAttribute="top" secondItem="YJs-mA-hdL" secondAttribute="bottom" constant="8" id="WwW-j4-4su"/>
+                            <constraint firstItem="7Rw-BI-pM2" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" constant="138" id="IHa-O5-0Nw"/>
+                            <constraint firstItem="0G3-Mh-sM8" firstAttribute="top" secondItem="mxB-Rd-7vs" secondAttribute="bottom" constant="8" id="ITS-m4-Ggz"/>
                             <constraint firstItem="YJs-mA-hdL" firstAttribute="centerX" secondItem="mp4-g8-bo9" secondAttribute="centerX" id="X0v-Fr-3et"/>
                             <constraint firstItem="jus-Wq-RgK" firstAttribute="top" secondItem="MwX-vR-64P" secondAttribute="top" id="cKs-Z9-u6u"/>
-                            <constraint firstItem="0G3-Mh-sM8" firstAttribute="top" secondItem="mxB-Rd-7vs" secondAttribute="bottom" constant="8" id="eg9-sA-htD"/>
+                            <constraint firstItem="1qF-aI-Dto" firstAttribute="top" secondItem="YJs-mA-hdL" secondAttribute="bottom" constant="8" id="dAx-ms-Gwg"/>
+                            <constraint firstItem="mxB-Rd-7vs" firstAttribute="top" secondItem="7Rw-BI-pM2" secondAttribute="bottom" constant="5" id="eB9-qU-Wfp"/>
                             <constraint firstItem="YJs-mA-hdL" firstAttribute="top" secondItem="Axq-Mm-Kgv" secondAttribute="top" constant="36" id="gcv-U8-MSN"/>
                             <constraint firstItem="Axq-Mm-Kgv" firstAttribute="trailing" secondItem="YJs-mA-hdL" secondAttribute="trailing" id="m6b-3L-ob7"/>
-                            <constraint firstItem="mxB-Rd-7vs" firstAttribute="centerX" secondItem="1qF-aI-Dto" secondAttribute="centerX" id="nB8-hF-VyL"/>
-                            <constraint firstItem="Axq-Mm-Kgv" firstAttribute="trailing" secondItem="mxB-Rd-7vs" secondAttribute="trailing" id="oeT-wn-X61"/>
+                            <constraint firstItem="1qF-aI-Dto" firstAttribute="leading" secondItem="Axq-Mm-Kgv" secondAttribute="leading" constant="20" id="qJO-zi-IMw"/>
+                            <constraint firstItem="mxB-Rd-7vs" firstAttribute="centerX" secondItem="7Rw-BI-pM2" secondAttribute="centerX" id="qui-pU-DSe"/>
                             <constraint firstItem="jus-Wq-RgK" firstAttribute="leading" secondItem="MwX-vR-64P" secondAttribute="trailing" constant="18" id="z0v-3V-qUx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Axq-Mm-Kgv"/>
@@ -240,7 +249,7 @@ GOT AWAY</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vww-Sg-jL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Cdj-cS-esw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="98"/>
+            <point key="canvasLocation" x="-46.376811594202906" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>

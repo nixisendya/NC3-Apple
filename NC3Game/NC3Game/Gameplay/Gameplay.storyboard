@@ -6,6 +6,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Bold.ttf">
+            <string>Rubik-Bold</string>
+        </array>
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--GameplayVC-->
         <scene sceneID="ivp-AC-tDP">
@@ -27,24 +38,26 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dE9-75-UIL">
                                 <rect key="frame" x="0.0" y="89" width="414" height="550"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="senter" translatesAutoresizingMaskIntoConstraints="NO" id="u0G-VV-hdZ">
+                                        <rect key="frame" x="0.0" y="-92" width="414" height="277"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="550" id="mWn-JF-mNo"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="senter" translatesAutoresizingMaskIntoConstraints="NO" id="u0G-VV-hdZ">
-                                <rect key="frame" x="0.0" y="18" width="414" height="277"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHL-hF-Tjj">
                                 <rect key="frame" x="100" y="109" width="214" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="64"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysq-sV-ssQ">
-                                <rect key="frame" x="0.0" y="179" width="414" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <rect key="frame" x="0.0" y="179" width="414" height="42"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -79,20 +92,20 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describe this location in one word" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JC9-C6-B2v">
-                                <rect key="frame" x="57.5" y="362" width="298.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="57.5" y="357" width="298.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player, start it off and ask a question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqK-yp-9M9">
-                                <rect key="frame" x="0.0" y="252" width="414" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="261" width="414" height="21"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hat-Z4-E5J">
-                                <rect key="frame" x="0.0" y="303" width="414" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="0.0" y="322" width="414" height="20"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -112,10 +125,10 @@
                             <constraint firstItem="kUU-uY-AGh" firstAttribute="top" secondItem="NH5-sc-SGy" secondAttribute="bottom" constant="10" id="L01-fS-YR1"/>
                             <constraint firstItem="hHH-Lj-Tcr" firstAttribute="top" secondItem="H5t-Pu-Kq7" secondAttribute="top" constant="10" id="M8h-mY-cna"/>
                             <constraint firstItem="H5t-Pu-Kq7" firstAttribute="trailing" secondItem="6h5-A0-3Bw" secondAttribute="trailing" constant="30" id="OGn-G2-WpY"/>
-                            <constraint firstItem="hat-Z4-E5J" firstAttribute="top" secondItem="VqK-yp-9M9" secondAttribute="bottom" constant="30" id="PXg-AP-h32"/>
+                            <constraint firstItem="hat-Z4-E5J" firstAttribute="top" secondItem="VqK-yp-9M9" secondAttribute="bottom" constant="40" id="PXg-AP-h32"/>
                             <constraint firstItem="Own-dZ-M0T" firstAttribute="top" secondItem="H5t-Pu-Kq7" secondAttribute="top" constant="315" id="RRW-l2-ukv"/>
                             <constraint firstItem="hHH-Lj-Tcr" firstAttribute="leading" secondItem="H5t-Pu-Kq7" secondAttribute="leading" constant="20" id="Reo-Hz-k29"/>
-                            <constraint firstItem="VqK-yp-9M9" firstAttribute="top" secondItem="Ysq-sV-ssQ" secondAttribute="bottom" constant="30" id="TSi-dj-u6K"/>
+                            <constraint firstItem="VqK-yp-9M9" firstAttribute="top" secondItem="Ysq-sV-ssQ" secondAttribute="bottom" constant="40" id="TSi-dj-u6K"/>
                             <constraint firstItem="dE9-75-UIL" firstAttribute="leading" secondItem="H5t-Pu-Kq7" secondAttribute="leading" id="TkG-wz-dtZ"/>
                             <constraint firstItem="KHL-hF-Tjj" firstAttribute="top" secondItem="H5t-Pu-Kq7" secondAttribute="top" constant="65" id="XU1-tz-9KX"/>
                             <constraint firstItem="NH5-sc-SGy" firstAttribute="leading" secondItem="H5t-Pu-Kq7" secondAttribute="leading" constant="44" id="XiW-el-hLz"/>
@@ -124,7 +137,7 @@
                             <constraint firstItem="kUU-uY-AGh" firstAttribute="leading" secondItem="H5t-Pu-Kq7" secondAttribute="leading" constant="44" id="fsq-jl-Q8t"/>
                             <constraint firstItem="Ysq-sV-ssQ" firstAttribute="top" secondItem="H5t-Pu-Kq7" secondAttribute="top" constant="135" id="gC1-7N-jFZ"/>
                             <constraint firstItem="sMT-JX-PGJ" firstAttribute="leading" secondItem="H5t-Pu-Kq7" secondAttribute="leading" constant="10" id="iQy-y0-aQo"/>
-                            <constraint firstItem="JC9-C6-B2v" firstAttribute="top" secondItem="hat-Z4-E5J" secondAttribute="bottom" constant="35" id="mtt-V5-6nt"/>
+                            <constraint firstItem="JC9-C6-B2v" firstAttribute="top" secondItem="hat-Z4-E5J" secondAttribute="bottom" constant="15" id="mtt-V5-6nt"/>
                             <constraint firstItem="dE9-75-UIL" firstAttribute="top" secondItem="hHH-Lj-Tcr" secondAttribute="bottom" constant="1" id="mzU-DO-NuT"/>
                             <constraint firstItem="JC9-C6-B2v" firstAttribute="leading" secondItem="Own-dZ-M0T" secondAttribute="trailing" constant="10" id="qnj-XI-cGB"/>
                             <constraint firstItem="VqK-yp-9M9" firstAttribute="leading" secondItem="H5t-Pu-Kq7" secondAttribute="leading" id="rfH-rT-JvB"/>
@@ -160,17 +173,17 @@
                             <rect key="frame" x="131.5" y="20" width="87" height="115"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME’S UP!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhl-yA-3EH">
-                            <rect key="frame" x="115.5" y="160" width="119" height="29"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <rect key="frame" x="111.5" y="160" width="127.5" height="28.5"/>
+                            <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="24"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrq-P9-3H6">
-                            <rect key="frame" x="20" y="209" width="310" height="122"/>
+                            <rect key="frame" x="20" y="208.5" width="310" height="121"/>
                             <string key="text">Time’s up detectives! I hope that was enough time for you to ask questions and gather enough clues to figure out who the spy is.
 
 It’s time to vote!</string>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -231,7 +244,7 @@ It’s time to vote!</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Emr-bT-H2w"/>
+        <segue reference="D3y-Xv-hAr"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Alarm1" width="87" height="115"/>
