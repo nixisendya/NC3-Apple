@@ -35,6 +35,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FootSteps" translatesAutoresizingMaskIntoConstraints="NO" id="a7F-MI-iq3">
+                                <rect key="frame" x="13" y="627" width="78" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FootSteps" translatesAutoresizingMaskIntoConstraints="NO" id="y2y-oF-sQ6">
+                                <rect key="frame" x="102" y="574" width="78" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FootSteps" translatesAutoresizingMaskIntoConstraints="NO" id="YqL-6M-E5h">
+                                <rect key="frame" x="202" y="562" width="78" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FootSteps" translatesAutoresizingMaskIntoConstraints="NO" id="aRg-Bp-CEQ">
+                                <rect key="frame" x="316" y="413" width="78" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="vB8-wW-tOg">
                                 <rect key="frame" x="62" y="303" width="290" height="290"/>
                                 <constraints>
@@ -79,6 +95,10 @@
                     </view>
                     <connections>
                         <outlet property="firstLabelGuess" destination="W5H-Gb-ZBy" id="fEx-e9-pIJ"/>
+                        <outlet property="footStep1" destination="a7F-MI-iq3" id="dhq-h6-WUs"/>
+                        <outlet property="footStep2" destination="y2y-oF-sQ6" id="2FC-RI-GLd"/>
+                        <outlet property="footStep3" destination="YqL-6M-E5h" id="E8g-de-M9o"/>
+                        <outlet property="footStep4" destination="aRg-Bp-CEQ" id="c5I-NO-UM0"/>
                         <outlet property="magnifyingGlassImage" destination="Kje-oK-fTg" id="1EC-KA-PF0"/>
                         <outlet property="playerAvatar" destination="vB8-wW-tOg" id="WR2-f8-p2g"/>
                         <outlet property="playerNameLabel" destination="wIH-xe-y8h" id="mS5-jK-B4D"/>
@@ -257,6 +277,7 @@ GOT AWAY</string>
         <image name="Badge" width="121" height="122"/>
         <image name="DetectiveLose" width="414" height="450"/>
         <image name="DetectiveWin" width="414" height="405"/>
+        <image name="FootSteps" width="78" height="71"/>
         <image name="MagnifyingGlass" width="222" height="329"/>
         <image name="homeButton" width="66" height="52"/>
         <image name="playAgain" width="256" height="52"/>

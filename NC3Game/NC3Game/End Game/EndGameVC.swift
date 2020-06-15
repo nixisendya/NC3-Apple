@@ -19,6 +19,11 @@ class EndGameVC: UIViewController {
     
     @IBOutlet weak var magnifyingGlassImage: UIImageView!
     
+    @IBOutlet weak var footStep1: UIImageView!
+    @IBOutlet weak var footStep2: UIImageView!
+    @IBOutlet weak var footStep3: UIImageView!
+    @IBOutlet weak var footStep4: UIImageView!
+    
     var performSegueToWinLoseCondition = false
     var votedPlayer: Player?
     var chosenLocation = ""
@@ -63,6 +68,7 @@ class EndGameVC: UIViewController {
         }
         
         animateGlass()
+        animateFootSteps()
 
       
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
@@ -125,4 +131,62 @@ class EndGameVC: UIViewController {
         }
     }
     
+    func animateFootSteps() {
+        footStep1.transform = CGAffineTransform(rotationAngle: (-60).degreesToRadians)
+        footStep1.alpha = 0
+        footStep2.transform = CGAffineTransform(rotationAngle: (-30).degreesToRadians)
+        footStep2.alpha = 0
+        footStep3.transform = CGAffineTransform(rotationAngle: (-60).degreesToRadians)
+        footStep3.alpha = 0
+        footStep4.alpha = 0
+        
+        UIView.animate(
+            withDuration: 1,
+            delay: 0,
+            options: [.autoreverse, .repeat, .allowUserInteraction],
+            animations: {
+                self.footStep1.alpha = 0.2
+            },
+            completion: nil
+        )
+        
+        UIView.animate(
+            withDuration: 1,
+            delay: 0.5,
+            options: [.autoreverse, .repeat, .allowUserInteraction],
+            animations: {
+                self.footStep2.alpha = 0.4
+            },
+            completion: nil
+        )
+        
+        UIView.animate(
+            withDuration: 1,
+            delay: 1,
+            options: [.autoreverse, .repeat, .allowUserInteraction],
+            animations: {
+                self.footStep3.alpha = 0.6
+            },
+            completion: nil
+        )
+        
+        UIView.animate(
+            withDuration: 1,
+            delay: 1.5,
+            options: [.autoreverse, .repeat, .allowUserInteraction],
+            animations: {
+                self.footStep4.alpha = 1
+            },
+            completion: nil
+        )
+    }
+}
+
+extension BinaryInteger {
+    var degreesToRadians: CGFloat { CGFloat(self) * .pi / 180 }
+}
+
+extension FloatingPoint {
+    var degreesToRadians: Self { self * .pi / 180 }
+    var radiansToDegrees: Self { self * 180 / .pi }
 }
