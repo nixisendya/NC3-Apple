@@ -68,6 +68,11 @@ class PickCardVC: UIViewController {
         }
     }
     
+    @IBAction func buttonClick(_ sender: Any) {
+        playButtonClick()
+    }
+    
+    
     func generateCards() {
         
         randomLocation = arrayOfLocation.randomElement()!
@@ -102,6 +107,7 @@ class PickCardVC: UIViewController {
     }
 
     @IBAction func okButtonPressed(_ sender: Any) {
+        playButtonClick()
         
         if cardLocationView.isHidden == false {
             cardLocationView.removeFromSuperview()
@@ -157,6 +163,7 @@ extension PickCardVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("didSelectItemAt: \(indexPath)")
+        playButtonClick()
         
         if arrayOfCards[indexPath.row].isOpened {
             let alertController = UIAlertController(title: "Enveloppe Opened!", message:

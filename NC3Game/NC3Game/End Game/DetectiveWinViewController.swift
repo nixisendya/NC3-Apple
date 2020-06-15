@@ -19,10 +19,12 @@ class DetectiveWinViewController: UIViewController {
     }
     
     @IBAction func homeButtonPressed(_ sender: Any) {
+        playButtonClick()
         performSegue(withIdentifier: "unwindToHome", sender: self)
         stopSound()
     }
     @IBAction func playAgainPressed(_ sender: Any) {
+        playButtonClick()
         performSegue(withIdentifier: "unwindToPlayer", sender: self)
         stopSound()
     }

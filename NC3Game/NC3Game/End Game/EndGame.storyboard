@@ -177,7 +177,7 @@ THE SPY</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HgL-Jd-Ota" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="rZ8-Ib-6Dy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="-591"/>
+            <point key="canvasLocation" x="-46.376811594202906" y="-591.29464285714278"/>
         </scene>
         <!--Win View Controller-->
         <scene sceneID="rr9-FA-SSE">

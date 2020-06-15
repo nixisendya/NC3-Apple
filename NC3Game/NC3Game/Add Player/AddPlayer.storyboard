@@ -76,6 +76,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="buttonClicked:" destination="nW0-VB-crE" eventType="touchUpInside" id="Dax-Yg-XSj"/>
                                     <action selector="startGamePressed:" destination="nW0-VB-crE" eventType="touchUpInside" id="oWL-oI-im2"/>
                                 </connections>
                             </button>
@@ -83,6 +84,7 @@
                                 <rect key="frame" x="20" y="49" width="34" height="34"/>
                                 <state key="normal" image="HomeButton"/>
                                 <connections>
+                                    <action selector="buttonClicked:" destination="nW0-VB-crE" eventType="touchUpInside" id="u9I-CX-5cR"/>
                                     <action selector="homeButtonPressed:" destination="nW0-VB-crE" eventType="touchUpInside" id="Gz9-Ex-GYW"/>
                                 </connections>
                             </button>
@@ -145,6 +147,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="JoinTeam"/>
                             <connections>
+                                <action selector="buttonClicked:" destination="nW0-VB-crE" eventType="touchUpInside" id="HmT-er-Tgf"/>
                                 <action selector="joinTeamButtonPressed:" destination="nW0-VB-crE" eventType="touchUpInside" id="id3-AQ-3V8"/>
                             </connections>
                         </button>

@@ -149,6 +149,7 @@
                             <rect key="frame" x="43" y="358" width="126" height="52"/>
                             <state key="normal" image="Cancel"/>
                             <connections>
+                                <action selector="buttonClicked:" destination="h1G-cD-uu0" eventType="touchUpInside" id="Mii-K0-Bdd"/>
                                 <action selector="cancelButtonPressed:" destination="h1G-cD-uu0" eventType="touchUpInside" id="AMM-oO-ytN"/>
                             </connections>
                         </button>
@@ -156,6 +157,7 @@
                             <rect key="frame" x="179" y="358" width="126" height="52"/>
                             <state key="normal" image="Confirm"/>
                             <connections>
+                                <action selector="buttonClicked:" destination="h1G-cD-uu0" eventType="touchUpInside" id="tFk-d4-VaX"/>
                                 <action selector="confirmButtonPressed:" destination="h1G-cD-uu0" eventType="touchUpInside" id="brB-8M-WcZ"/>
                             </connections>
                         </button>

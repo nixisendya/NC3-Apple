@@ -48,6 +48,11 @@ class AddPlayerVC: UIViewController {
         }
     }
     
+    @IBAction func buttonClicked(_ sender: Any) {
+        playButtonClick()
+    }
+    
+    
     @IBAction func unwindPlayer( _ seg: UIStoryboardSegue) {
     }
     
@@ -113,6 +118,7 @@ extension AddPlayerVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 
     @objc func addButtonTapped() {
+        playButtonClick()
         print("Show UI to add new player")
         nameTextField.text = ""
         self.overlayView.backgroundColor = .black

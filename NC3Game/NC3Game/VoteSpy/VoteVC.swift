@@ -48,6 +48,11 @@ class VoteVC: UIViewController {
         }
     }
     
+    
+    @IBAction func buttonClicked(_ sender: Any) {
+        playButtonClick()
+    }
+    
     @IBAction func cancelButtonPressed(_ sender: Any) {
         overlayView.removeFromSuperview()
         viewConfirmVote.removeFromSuperview()
@@ -73,7 +78,7 @@ extension VoteVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        playButtonClick()
         confirmNameLabel.text = arrayOfPlayers[indexPath.row].name
         confirmPlayerImage.image = arrayOfPlayers[indexPath.row].avatar
         

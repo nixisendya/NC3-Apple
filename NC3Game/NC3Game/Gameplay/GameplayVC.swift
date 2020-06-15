@@ -98,9 +98,24 @@ class GameplayVC: UIViewController {
     }
     
     
+    @IBAction func buttonClicked(_ sender: Any) {
+        playButtonClick()
+    }
+    
+    
     @IBAction func homeButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "unwindToHome", sender: self)
-        stopSound()
+        var exitAlert = UIAlertController(title: "Leave Game", message: "Are you sure you want to leave the game?", preferredStyle: UIAlertController.Style.alert)
+        
+        exitAlert.addAction(UIAlertAction(title: "Cancel", style: .default))
+        
+        exitAlert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { action -> Void in
+            self.performSegue(withIdentifier: "unwindToHome", sender: self)
+            self.timer!.invalidate()
+            stopSound()
+        }))
+
+        present(exitAlert, animated: true, completion: nil)
+        
     }
     
     @IBAction func buttonNextSuggestionPressed(_ sender: Any) {
@@ -161,6 +176,7 @@ class GameplayVC: UIViewController {
         view.addSubview(viewAlert)
         
         playSound(sound: "AlarmSiren", type: "mp3")
+        timer!.invalidate()
     }
     
     func animateSpeechBubble() {

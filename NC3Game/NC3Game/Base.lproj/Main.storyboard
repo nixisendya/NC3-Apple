@@ -20,6 +20,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="buttonHTP"/>
                                 <connections>
+                                    <action selector="playButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a55-v5-MZO"/>
                                     <segue destination="mit-md-nK1" kind="show" identifier="goToHowToPlay" id="Oua-qq-qPc"/>
                                 </connections>
                             </button>
@@ -32,6 +33,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="play"/>
                                 <connections>
+                                    <action selector="playButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mTy-Tk-piP"/>
                                     <segue destination="60V-Rs-d43" kind="show" identifier="goToAddPlayer" id="T1H-zF-CPz"/>
                                 </connections>
                             </button>

@@ -36,3 +36,13 @@ func playSoundLoop(sound: String, type: String, loop: Int) {
 func stopSound(){
     audioPlayer?.stop()
 }
+
+func playButtonClick() {
+    let buttonClick = URL(fileURLWithPath: Bundle.main.path(forResource: "ButtonClick", ofType: "mp3")!)
+    do {
+         audioPlayer = try AVAudioPlayer(contentsOf: buttonClick)
+         audioPlayer?.play()
+    } catch {
+       print("ERROR: Could not find and play the sound file!")
+    }
+}

@@ -72,7 +72,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysq-sV-ssQ">
-                                <rect key="frame" x="0.0" y="179" width="414" height="42"/>
+                                <rect key="frame" x="0.0" y="179" width="414" height="43"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -81,6 +81,7 @@
                                 <rect key="frame" x="44" y="728" width="326" height="52"/>
                                 <state key="normal" image="VoteButton"/>
                                 <connections>
+                                    <action selector="buttonClicked:" destination="Oqy-Im-zOa" eventType="touchUpInside" id="n7H-Vr-HMf"/>
                                     <segue destination="0b6-7n-mK8" kind="show" identifier="goToVote" id="D3y-Xv-hAr"/>
                                 </connections>
                             </button>
@@ -88,6 +89,7 @@
                                 <rect key="frame" x="44" y="790" width="326" height="52"/>
                                 <state key="normal" image="GuessLocationButton"/>
                                 <connections>
+                                    <action selector="buttonClicked:" destination="Oqy-Im-zOa" eventType="touchUpInside" id="Ec6-K8-vkE"/>
                                     <segue destination="bCA-ti-SGh" kind="show" identifier="goToLocation" id="3J1-ZP-dTr"/>
                                 </connections>
                             </button>
@@ -108,19 +110,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describe this location in one word" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JC9-C6-B2v">
-                                <rect key="frame" x="57.5" y="357" width="298.5" height="20"/>
+                                <rect key="frame" x="57.5" y="358" width="298.5" height="20.5"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
                                 <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player, start it off and ask a question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqK-yp-9M9">
-                                <rect key="frame" x="0.0" y="261" width="414" height="21"/>
+                                <rect key="frame" x="0.0" y="262" width="414" height="21"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hat-Z4-E5J">
-                                <rect key="frame" x="0.0" y="322" width="414" height="20"/>
+                                <rect key="frame" x="0.0" y="323" width="414" height="20"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
                                 <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -211,6 +213,7 @@ It’s time to vote!</string>
                             <rect key="frame" x="91" y="353" width="168" height="52"/>
                             <state key="normal" image="VoteSmall"/>
                             <connections>
+                                <action selector="buttonClicked:" destination="Oqy-Im-zOa" eventType="touchUpInside" id="uIK-oJ-etK"/>
                                 <segue destination="0b6-7n-mK8" kind="show" identifier="goToVote" id="Emr-bT-H2w"/>
                             </connections>
                         </button>

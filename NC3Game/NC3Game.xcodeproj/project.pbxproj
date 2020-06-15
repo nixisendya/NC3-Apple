@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3E49C4172491EE9D0011F4B4 /* VoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E49C4162491EE9D0011F4B4 /* VoteCollectionViewCell.swift */; };
 		3E4EE14E24925E3000BA9AC3 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4EE14D24925E3000BA9AC3 /* PlaySound.swift */; };
-		3E4EE1512492685400BA9AC3 /* WalkieTalkie.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E4EE1502492685400BA9AC3 /* WalkieTalkie.wav */; };
 		3E6CB1D4248F5CE100BF8816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB1D3248F5CE100BF8816 /* AppDelegate.swift */; };
 		3E6CB1D6248F5CE100BF8816 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB1D5248F5CE100BF8816 /* SceneDelegate.swift */; };
 		3E6CB1D8248F5CE100BF8816 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB1D7248F5CE100BF8816 /* ViewController.swift */; };
@@ -40,11 +39,11 @@
 		3EA4A34124971DD900ECB2D4 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EA4A33E24971DD900ECB2D4 /* Rubik-Medium.ttf */; };
 		3EA4A34224971DD900ECB2D4 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EA4A33F24971DD900ECB2D4 /* Rubik-Regular.ttf */; };
 		3EA4A344249732D300ECB2D4 /* Drumroll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3EA4A343249732D300ECB2D4 /* Drumroll.mp3 */; };
+		3EA4A346249737DC00ECB2D4 /* ButtonClick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3EA4A345249737DC00ECB2D4 /* ButtonClick.mp3 */; };
 		3EC4E39D2492313200CD92E8 /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4E39C2492313200CD92E8 /* WinViewController.swift */; };
 		3EC4E39F2492345200CD92E8 /* DetectiveWinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4E39E2492345200CD92E8 /* DetectiveWinViewController.swift */; };
 		C11182FB248FFB38004605C9 /* GudanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11182FA248FFB38004605C9 /* GudanceVC.swift */; };
 		C11183022493D228004605C9 /* EggTimer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C11183012493D228004605C9 /* EggTimer.mp3 */; };
-		C14D646724965D88002801DB /* SniperRifle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C14D646624965D88002801DB /* SniperRifle.mp3 */; };
 		C14D646924965EA7002801DB /* evilLaugh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C14D646824965EA7002801DB /* evilLaugh.mp3 */; };
 		C14D646B24965F38002801DB /* Applause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C14D646A24965F38002801DB /* Applause.mp3 */; };
 		C14D647324967951002801DB /* Countdown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C14D647224967951002801DB /* Countdown.mp3 */; };
@@ -53,7 +52,6 @@
 /* Begin PBXFileReference section */
 		3E49C4162491EE9D0011F4B4 /* VoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		3E4EE14D24925E3000BA9AC3 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
-		3E4EE1502492685400BA9AC3 /* WalkieTalkie.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WalkieTalkie.wav; sourceTree = "<group>"; };
 		3E6CB1D0248F5CE100BF8816 /* NC3Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NC3Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E6CB1D3248F5CE100BF8816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E6CB1D5248F5CE100BF8816 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,11 +84,11 @@
 		3EA4A33E24971DD900ECB2D4 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		3EA4A33F24971DD900ECB2D4 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		3EA4A343249732D300ECB2D4 /* Drumroll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Drumroll.mp3; sourceTree = "<group>"; };
+		3EA4A345249737DC00ECB2D4 /* ButtonClick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ButtonClick.mp3; sourceTree = "<group>"; };
 		3EC4E39C2492313200CD92E8 /* WinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
 		3EC4E39E2492345200CD92E8 /* DetectiveWinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectiveWinViewController.swift; sourceTree = "<group>"; };
 		C11182FA248FFB38004605C9 /* GudanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GudanceVC.swift; sourceTree = "<group>"; };
 		C11183012493D228004605C9 /* EggTimer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EggTimer.mp3; sourceTree = "<group>"; };
-		C14D646624965D88002801DB /* SniperRifle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SniperRifle.mp3; sourceTree = "<group>"; };
 		C14D646824965EA7002801DB /* evilLaugh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = evilLaugh.mp3; sourceTree = "<group>"; };
 		C14D646A24965F38002801DB /* Applause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Applause.mp3; sourceTree = "<group>"; };
 		C14D647224967951002801DB /* Countdown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Countdown.mp3; sourceTree = "<group>"; };
@@ -118,15 +116,14 @@
 		3E4EE14F2492684300BA9AC3 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				3EA4A345249737DC00ECB2D4 /* ButtonClick.mp3 */,
 				3EA4A343249732D300ECB2D4 /* Drumroll.mp3 */,
 				3EA4A33A24971B0900ECB2D4 /* AlarmSiren.mp3 */,
 				3EA4A3382497102C00ECB2D4 /* WalkieTalkie2.mp3 */,
-				C14D646624965D88002801DB /* SniperRifle.mp3 */,
 				C11183012493D228004605C9 /* EggTimer.mp3 */,
 				C14D647224967951002801DB /* Countdown.mp3 */,
 				C14D646824965EA7002801DB /* evilLaugh.mp3 */,
 				C14D646A24965F38002801DB /* Applause.mp3 */,
-				3E4EE1502492685400BA9AC3 /* WalkieTalkie.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -321,7 +318,6 @@
 				3EA4A34024971DD900ECB2D4 /* Rubik-Bold.ttf in Resources */,
 				3EA4A34224971DD900ECB2D4 /* Rubik-Regular.ttf in Resources */,
 				C14D647324967951002801DB /* Countdown.mp3 in Resources */,
-				C14D646724965D88002801DB /* SniperRifle.mp3 in Resources */,
 				3E6CB1FC248F5E7300BF8816 /* Vote.storyboard in Resources */,
 				3E6CB1F8248F5E2800BF8816 /* Gameplay.storyboard in Resources */,
 				3EA4A33B24971B0900ECB2D4 /* AlarmSiren.mp3 in Resources */,
@@ -331,12 +327,12 @@
 				3E6CB1E0248F5CE200BF8816 /* LaunchScreen.storyboard in Resources */,
 				3EA4A344249732D300ECB2D4 /* Drumroll.mp3 in Resources */,
 				3E6CB1EE248F5D6C00BF8816 /* AddPlayer.storyboard in Resources */,
+				3EA4A346249737DC00ECB2D4 /* ButtonClick.mp3 in Resources */,
 				3E6CB207248F5F3B00BF8816 /* HowToPlay.storyboard in Resources */,
 				C11183022493D228004605C9 /* EggTimer.mp3 in Resources */,
 				3EA4A3392497102C00ECB2D4 /* WalkieTalkie2.mp3 in Resources */,
 				3E6CB203248F5F0700BF8816 /* VoteLocation.storyboard in Resources */,
 				C14D646B24965F38002801DB /* Applause.mp3 in Resources */,
-				3E4EE1512492685400BA9AC3 /* WalkieTalkie.wav in Resources */,
 				3E6CB1DD248F5CE200BF8816 /* Assets.xcassets in Resources */,
 				3E6CB1DB248F5CE100BF8816 /* Main.storyboard in Resources */,
 				3EA4A34124971DD900ECB2D4 /* Rubik-Medium.ttf in Resources */,

@@ -25,7 +25,12 @@ class ViewController: UIViewController {
     
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
     }
+    
+    @IBAction func playButtonClicked(_ sender: Any) {
+        playButtonClick()
+    }
 
+    
 
 }
 
